@@ -10,6 +10,7 @@ export const makeRequest = async <T>(url: string, parser: Parser, ...extraParams
     if (err) {
         throw err;
     }
+
     return parser.parse.apply(null, [cleanResponses(response?.data), ...extraParams]);
 };
 
