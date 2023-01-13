@@ -1,7 +1,7 @@
 {
   "name": "formula-one-wrapper",
   "version": "0.1.0",
-  "description": "A Node.js API Wrapper built powered by TypeScript",
+  "description": "A Node.js API Wrapper powered by TypeScript",
   "main": "./lib/index.js",
   "scripts": {
     "build": "rimraf ./lib && tsc",
