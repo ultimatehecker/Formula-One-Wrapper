@@ -6,7 +6,7 @@ export default class LocationParser extends Parser {
     private static instance: LocationParser;
 
     public static getInstance() {
-        if(this.instance) {
+        if(!this.instance) {
             this.instance = new LocationParser();
         }
 
