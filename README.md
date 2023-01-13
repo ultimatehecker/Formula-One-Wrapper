@@ -1,2 +1,3 @@
 # Formula1-Wrapper
-A Node.js API Wrapper built powered by TypeScript
+
+A wrapper of the Ergast API for Node.js powered by TypeScript. 

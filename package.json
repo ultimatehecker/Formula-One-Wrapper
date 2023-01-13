@@ -1,7 +1,7 @@
 {
   "name": "formula-one-wrapper",
   "version": "0.1.0",
-  "description": "A Node.js API Wrapper powered by TypeScript",
+  "description": "A wrapper of the Ergast API for Node.js powered by TypeScript",
   "main": "./lib/index.js",
   "keywords": [
     "f1",
