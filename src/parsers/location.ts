@@ -1,5 +1,5 @@
-import Parser from '@parsers/parser';
-import { Location } from '@utils/types'
+import Parser from './parser';
+import { Location } from '../utils/types'
 
 export default class LocationParser extends Parser {
 
@@ -18,12 +18,12 @@ export default class LocationParser extends Parser {
 
         const location: Location = {
             latitude: parseFloat(lat),
-            longtitude: parseFloat(long),
+            longitude: parseFloat(long),
             city, 
             country,
         };
 
         return location
     }
-    
+
 }
