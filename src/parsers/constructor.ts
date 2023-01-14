@@ -1,6 +1,5 @@
 import Parser from './parser';
 import { Constructor } from '../utils/types';
-import { connected } from 'process';
 
 export default class ConstructorParser extends Parser {
 
@@ -11,7 +10,7 @@ export default class ConstructorParser extends Parser {
             this.instance = new ConstructorParser()
         }
 
-        return this.instance
+        return this.instance;
     }
 
     public parse(data: any): any {
@@ -32,6 +31,6 @@ export default class ConstructorParser extends Parser {
             nationality
         }
 
-        return driver
+        return driver;
     }
 }
