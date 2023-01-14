@@ -14,7 +14,7 @@ export default class DriversParser extends Parser {
 
     public parse(data: any): any {
         const driverParser = DriverParser.getInstance();
-        const drivers = [];
+        const drivers: any[] = [];
 
         if (!data?.Drivers || !data?.Drivers.length) {
             return drivers;
