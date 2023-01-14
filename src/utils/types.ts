@@ -60,7 +60,8 @@ export interface DriverStanding {
     position: number;
     points: number;
     wins: number;
-    constructor: Constructor;
+    driver: Driver;
+    constructors: Constructors;
 }
 
 export type FinishingStatus = FinishingStatus[];
