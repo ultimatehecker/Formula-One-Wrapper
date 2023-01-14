@@ -6,7 +6,7 @@ export interface Driver {
     number?: number;
     firstName: string;
     lastName: string;
-    birthday: string;
+    dob: string;
     nationality: string;
 }
 
