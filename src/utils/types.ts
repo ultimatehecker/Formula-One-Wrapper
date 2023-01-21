@@ -18,6 +18,15 @@ export interface Constructor {
     nationality: string;
 }
 
+export type ConstructorStandings = ConstructorStanding[];
+
+export interface ConstructorStanding {
+    position: number;
+    points: number;
+    wins: number;
+    constructor: Constructor;
+}
+
 export interface Circuit {
     id: string;
     name: string;
