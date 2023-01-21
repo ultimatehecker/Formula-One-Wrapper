@@ -61,7 +61,7 @@ export type DriverStandings = DriverStanding[];
 
 export interface StandingList<T> {
     season: number;
-    number: number;
+    round: number;
     standing: T;
 }
 
