@@ -7,7 +7,7 @@ import ConstructorStandingsParser from "./parsers/constructorStandings.js";
 import RacesScheduleParser from "./parsers/racesSchedule.js";
 import StandingListParser from "./parsers/standingList.js";
 
-import { makeRequest } from "./utils/request";
+import { makeRequest } from "./utils/request.js";
 import { Constructor, Constructors, ConstructorStandings, Driver, Drivers, DriverStandings, RacesSchedule, StandingList } from "./utils/types";
 
 const getConstructors = async (year: number | string): Promise<Constructors> => {
