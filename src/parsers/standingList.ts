@@ -1,5 +1,5 @@
-import { StandingList } from "../utils/types";
-import Parser from "./parser";
+import { StandingList } from "../utils/types.js";
+import Parser from "./parser.js";
 
 export default class StandingListParser extends Parser {
 

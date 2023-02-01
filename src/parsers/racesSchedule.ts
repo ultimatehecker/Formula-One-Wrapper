@@ -1,5 +1,5 @@
-import Parser from './parser';
-import RaceScheduleParser from './raceSchedule';
+import Parser from './parser.js';
+import RaceScheduleParser from './raceSchedule.js';
 
 export default class RacesScheduleParser extends Parser {
 

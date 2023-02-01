@@ -1,5 +1,5 @@
-import Parser from './parser';
-import { Constructor } from '../utils/types';
+import Parser from './parser.js';
+import { Constructor } from '../utils/types.js';
 
 export default class ConstructorParser extends Parser {
 

@@ -1,6 +1,6 @@
-import Parser from './parser';
-import { Circuit } from '../utils/types';
-import LocationParser from './location';
+import Parser from './parser.js';
+import { Circuit } from '../utils/types.js';
+import LocationParser from './location.js';
 
 export default class CircuitParser extends Parser {
 

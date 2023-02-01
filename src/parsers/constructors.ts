@@ -1,5 +1,5 @@
-import Parser from './parser';
-import ConstructorParser from './constructor';
+import Parser from './parser.js';
+import ConstructorParser from './constructor.js';
 
 export default class ConstructorsParser extends Parser {
 

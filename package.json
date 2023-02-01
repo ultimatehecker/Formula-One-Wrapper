@@ -13,7 +13,7 @@
   "scripts": {
     "build": "npm i && rimraf ./lib && tsc",
     "start:dev": "npx nodemon",
-    "start": "npm run build && node build/index.js"
+    "start": "npm run build && node lib/index.js"
   },
   "repository": {
     "type": "git",

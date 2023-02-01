@@ -40,3 +40,5 @@ If you plan on using the npm package for your own projects, install it by doing:
 yarn add f1-api
 # or npm install f1-api
 ```
+
+## Endpoints and Usage

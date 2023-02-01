@@ -1,6 +1,6 @@
-import Parser from './parser';
-import DriverStandingParser from './driverStanding';
-import ConstructorStandingParser from './constructorStanding';
+import Parser from './parser.js';
+import DriverStandingParser from './driverStanding.js';
+import ConstructorStandingParser from './constructorStanding.js';
 
 export default class ConstructorStandingsParser extends Parser {
 

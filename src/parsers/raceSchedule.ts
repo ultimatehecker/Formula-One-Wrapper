@@ -1,6 +1,6 @@
-import Parser from './parser';
-import { RaceSchedule } from '../utils/types';
-import CircuitParser from './circuit';
+import Parser from './parser.js';
+import { RaceSchedule } from '../utils/types.js';
+import CircuitParser from './circuit.js';
 
 export default class RaceScheduleParser extends Parser {
 

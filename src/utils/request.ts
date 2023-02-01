@@ -1,6 +1,6 @@
 import axios, { AxiosResponse } from 'axios';
 import to from 'await-to-js'
-import Parser from '../parsers/parser'
+import Parser from '../parsers/parser.js'
 
 const baseUrl = 'http://ergast.com/api/f1';
 

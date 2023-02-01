@@ -1,11 +1,11 @@
-import DriverParser from "./parsers/driver";
-import DriversParser from "./parsers/drivers";
-import ConstructorParser from "./parsers/constructor";
-import ConstructorsParser from "./parsers/constructors";
-import DriverStandingsParser from "./parsers/driverStandings";
-import ConstructorStandingsParser from "./parsers/constructorStandings";
-import RacesScheduleParser from "./parsers/racesSchedule";
-import StandingListParser from "./parsers/standingList";
+import DriverParser from "./parsers/driver.js";
+import DriversParser from "./parsers/drivers.js";
+import ConstructorParser from "./parsers/constructor.js";
+import ConstructorsParser from "./parsers/constructors.js";
+import DriverStandingsParser from "./parsers/driverStandings.js";
+import ConstructorStandingsParser from "./parsers/constructorStandings.js";
+import RacesScheduleParser from "./parsers/racesSchedule.js";
+import StandingListParser from "./parsers/standingList.js";
 
 import { makeRequest } from "./utils/request";
 import { Constructor, Constructors, ConstructorStandings, Driver, Drivers, DriverStandings, RacesSchedule, StandingList } from "./utils/types";
