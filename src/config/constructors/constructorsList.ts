@@ -2,7 +2,7 @@ import _ from 'underscore';
 import Constructor from './constructor';
 
 function ConstructorsList(this: any, constructorsParser: any) {
-    var self = this;
+    let self = this;
     this.constructors = [];
 
     _.map(constructorsParser, function(constructorsParser) {
