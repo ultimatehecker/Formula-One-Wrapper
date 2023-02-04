@@ -31,14 +31,3 @@ npm run build
 
 After this you are done! You can change the code however you want, just make sure to compile everything before running the code. To
 run the code, you can do that by doing either `npm run start` or `npm run start:watch`
-
-## Installation
-
-If you plan on using the npm package for your own projects, install it by doing:
-
-```bash
-yarn add f1-api
-# or npm install f1-api
-```
-
-## Endpoints and Usage

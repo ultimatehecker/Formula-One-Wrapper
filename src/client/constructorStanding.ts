@@ -1,4 +1,4 @@
-import { ConstructorStanding } from '../utils/types.js';
+import { ConstructorStanding } from '../utils/types.js.js';
 import Parser from './parser.js';
 import ConstructorParser from './constructor.js';
 

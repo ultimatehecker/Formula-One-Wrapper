@@ -1,5 +1,5 @@
 import Parser from './parser.js';
-import { Location } from '../utils/types.js'
+import { Location } from '../utils/types.js.js'
 
 export default class LocationParser extends Parser {
 

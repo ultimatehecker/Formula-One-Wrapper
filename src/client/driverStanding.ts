@@ -1,4 +1,4 @@
-import { DriverStanding } from '../utils/types.js';
+import { DriverStanding } from '../utils/types.js.js';
 import Parser from './parser.js';
 import DriverParser from './driver.js';
 import ConstructorsParser from './constructors.js';

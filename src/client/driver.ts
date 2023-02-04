@@ -1,5 +1,5 @@
 import Parser from "./parser.js";
-import { Driver } from '../utils/types.js';
+import { Driver } from '../utils/types.js.js';
 
 export default class DriverParser extends Parser {
 
