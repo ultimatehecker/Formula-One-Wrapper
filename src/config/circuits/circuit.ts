@@ -12,5 +12,4 @@ export default class Circuit {
     url: string;
     circuitName: string;
     location: LocationFinder;
-
 }
