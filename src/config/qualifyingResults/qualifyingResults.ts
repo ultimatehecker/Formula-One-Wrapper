@@ -1,0 +1,17 @@
+import _ from 'underscore';
+import DriverQualifyingResult from './driverQualifiyingResult';
+
+function QualifyingResults(this: any, driverQualifiyingResultsParser: any) {
+    let self = this;
+    this.driverQualifiyingResults = [];
+
+    _.map(driverQualifiyingResultsParser, function(driverResult) {
+        self.driverQualifiyingResultsParser.push(new DriverQualifyingResult(driverResult));
+    });
+};
+
+QualifyingResults.prototype.getDriverResult = function(pos: number) {
+    return _.find(this.driverQualifiyingResults, function(driverResult) {
+        return driverResult.pos == pos;
+    });
+};
