@@ -15,3 +15,5 @@ QualifyingResults.prototype.getDriverResult = function(pos: number) {
         return driverResult.pos == pos;
     });
 };
+
+module.exports = QualifyingResults;
