@@ -4,4 +4,4 @@ const config = {
     maxResponseRows: 1000
 };
 
-module.exports = config;
+export default config;

@@ -11,4 +11,4 @@ function getRequest(url: any, offset: any, limit: any, callback: any) {
     });
 }
 
-module.exports = getRequest;
+export default getRequest;
