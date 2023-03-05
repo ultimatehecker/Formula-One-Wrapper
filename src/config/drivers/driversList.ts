@@ -1,6 +1,8 @@
 import _ from 'underscore';
 import Driver from './driver';
 
+/*
+
 function DriversList(this: any, driversParser: any) {
     let self = this;
     this.drivers = [];
@@ -15,5 +17,24 @@ DriversList.prototype.getDriver = function(code: any) {
         return driver.code == code;
     });
 };
+
+*/
+
+class DriversList {
+    drivers: Driver[];
+    
+    constructor(driversParser: any) {
+        this.drivers = [];
+        _.map(driversParser, (driversParser: any) => {
+            this.drivers.push(new Driver(driversParser));
+        });
+    }
+
+    getDriver(code: any) {
+        return _.find(this.drivers, (driver: any) => {
+            return driver.code == code;
+        });
+    }
+}
 
 module.exports = DriversList;

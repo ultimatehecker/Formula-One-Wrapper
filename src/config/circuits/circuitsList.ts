@@ -1,6 +1,8 @@
 import _ from 'underscore';
 import Circuit from './circuit';
 
+/*
+
 function CircuitsList(this: any, circuitParser: any) {
     let self = this;
     this.circuits = [];
@@ -16,4 +18,23 @@ CircuitsList.prototype.getCircuit = function(id: any) {
     });
 };
 
-module.exports = CircuitsList;
+*/
+
+class CircuitsList {
+    circuits: Circuit[];
+
+    constructor(circuitParser: any) {
+        this.circuits = [];
+        _.map(circuitParser, (circuitParser: any) => {
+            this.circuits.push(new Circuit(circuitParser));
+        });
+    }
+
+    getCircuit(id: any) {
+        return _.find(this.circuits, (circuit: any) => {
+            return circuit.circuitId == id;
+        });
+    }
+}
+
+export default CircuitsList;
