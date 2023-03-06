@@ -27,7 +27,7 @@
   "homepage": "https://github.com/ultimatehecker/Formula-One-Wrapper#readme",
   "devDependencies": {
     "@types/axios": "^0.14.0",
-    "@types/node": "^18.14.5",
+    "@types/node": "^18.14.6",
     "@types/restler": "^3.1.6",
     "nodemon": "^2.0.21",
     "rimraf": "^4.2.0",
