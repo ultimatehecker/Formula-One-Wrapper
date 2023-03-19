@@ -36,4 +36,4 @@ class PitStopList {
     }
 }
 
-module.exports = PitStopList;
+export default PitStopList;

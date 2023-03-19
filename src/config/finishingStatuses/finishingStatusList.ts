@@ -37,4 +37,4 @@ class FinishingStatusList {
     }
 }
 
-module.exports = FinishingStatusList;
+export default FinishingStatusList;

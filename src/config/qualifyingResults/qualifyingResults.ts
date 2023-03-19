@@ -37,4 +37,4 @@ class QualifyingResults {
     }
 }
 
-module.exports = QualifyingResults;
+export default QualifyingResults;

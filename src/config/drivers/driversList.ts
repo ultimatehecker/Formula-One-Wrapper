@@ -37,4 +37,4 @@ class DriversList {
     }
 }
 
-module.exports = DriversList;
+export default DriversList;

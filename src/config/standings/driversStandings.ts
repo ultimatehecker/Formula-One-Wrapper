@@ -37,4 +37,4 @@ class DriversStandings {
     }
 }
 
-module.exports = DriversStandings;
+export default DriversStandings;

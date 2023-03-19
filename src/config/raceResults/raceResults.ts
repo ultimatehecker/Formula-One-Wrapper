@@ -37,4 +37,4 @@ class RaceResults {
     }
 }
 
-module.exports = RaceResults;
+export default RaceResults;

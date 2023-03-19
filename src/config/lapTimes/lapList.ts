@@ -40,4 +40,4 @@ class LapList {
     }
 }
 
-module.exports = LapList;
+export default LapList;

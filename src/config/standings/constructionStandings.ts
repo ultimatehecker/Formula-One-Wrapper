@@ -36,4 +36,4 @@ class ConstructorsStandings {
     }
 }
 
-module.exports = ConstructorsStandings;
+export default ConstructorsStandings;
