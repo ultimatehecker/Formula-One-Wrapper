@@ -1,6 +1,8 @@
 import _ from 'underscore';
 import Race from '../races/races';
 
+/*
+
 function Season(this: any,seasonParser: any) {
     let self = this;
     this.races = [];
@@ -16,4 +18,23 @@ Season.prototype.getRace = function(round: any) {
     });
 };
 
-module.exports = Season;
+*/
+
+class Season {
+    raceResult: Race[];
+
+    constructor(driverResultsParser: any) {
+        this.raceResult = [];
+        _.map(driverResultsParser, (driverResult: any) => {
+            this.raceResult.push(new Race(driverResult));
+        });
+    }
+
+    getRace(round: number) {
+        return _.find(this.raceResult, (raceResult: any) => {
+            return raceResult.round == round;
+        });
+    }
+}
+
+// module.exports = Season;
