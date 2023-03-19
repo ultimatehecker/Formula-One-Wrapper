@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 {
   "name": "formula-one-wrapper",
   "version": "0.1.0",
@@ -40,3 +41,47 @@
     "restler": "^3.4.0"
   }
 }
+=======
+{
+  "name": "formula-one-wrapper",
+  "version": "0.1.0",
+  "description": "A wrapper of the Ergast API for Node.js powered by TypeScript",
+  "main": "./lib/index.js",
+  "type": "module",
+  "keywords": [
+    "f1",
+    "formula1",
+    "formula-one",
+    "ergast"
+  ],
+  "scripts": {
+    "build": "npm i && rimraf ./lib && tsc",
+    "start:dev": "npx nodemon",
+    "start": "npm run build && node lib/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ultimatehecker/Formula-One-Wrapper.git"
+  },
+  "author": "ultimate_hecker#1165",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/ultimatehecker/Formula-One-Wrapper/issues"
+  },
+  "homepage": "https://github.com/ultimatehecker/Formula-One-Wrapper#readme",
+  "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/node": "^18.14.5",
+    "@types/restler": "^3.1.6",
+    "nodemon": "^2.0.21",
+    "rimraf": "^4.2.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "@types/underscore": "^1.11.4",
+    "axios": "^1.3.4",
+    "restler": "^3.4.0"
+  }
+}
+>>>>>>> Stashed changes
