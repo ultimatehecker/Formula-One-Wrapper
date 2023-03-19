@@ -37,4 +37,4 @@ class ConstructorsList {
     }
 }
 
-module.exports = ConstructorsList;
+export default ConstructorsList;
