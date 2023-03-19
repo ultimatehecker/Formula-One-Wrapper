@@ -12,7 +12,7 @@ export default class DriverRaceResult {
         this.constructorName = new Constructor(raceResultParser.Constructor);
         this.grid = parseInt(raceResultParser.grid);
         this.laps = parseInt(raceResultParser.laps);
-        this.status = raceResultParser.status
+        this.status = raceResultParser.status;
         this.time = raceResultParser.Time ? new Time(raceResultParser.Time) : this.time = null;
         this.fastestLap = raceResultParser.FastestLap ? new FastestLap(raceResultParser.FastestLap) : this.fastestLap = null;
     }
@@ -25,6 +25,6 @@ export default class DriverRaceResult {
     grid: number
     laps: number
     status: any
-    time: Time
-    fastestLap: FastestLap
+    time: Time | null
+    fastestLap: FastestLap | null
 }
