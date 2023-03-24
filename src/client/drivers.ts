@@ -2,8 +2,16 @@ import getRequest from "../utils/request";
 import Driver from "../config/drivers/driver";
 import DriversList from "../config/drivers/driversList";
 import config from "../utils/config";
+import ResponsesValidator from "./responsesValidator";
 
 export default class Drivers {
+
+    constructor(responsesValidator: ResponsesValidator) {
+        this.responsesValidator = responsesValidator;
+    }
+    
+    responsesValidator: ResponsesValidator;
+    
     getDriver(driverId: any, callback: any, responsesValidator: any) {
         let url = config.baseUrl + "drivers/" + driverId + ".json";
         getRequest(url, 0, config.defaultResponseRows, function(err: any, response: any) {

@@ -3,8 +3,16 @@ import getRequest from "../utils/request";
 import Lap from '../config/lapTimes/lap';
 import LapList from '../config/lapTimes/lapList';
 import config from '../utils/config';
+import ResponsesValidator from './responsesValidator';
 
 export default class LapTimes {
+
+    constructor(responsesValidator: ResponsesValidator) {
+        this.responsesValidator = responsesValidator;
+    }
+    
+    responsesValidator: ResponsesValidator;
+    
     getLapTimes(season: string, round: string, callback: any, responsesValidator: any) {
         let url = config.baseUrl + season + "/" + round + "/laps.json";
         getRequest(url, 0, config.defaultResponseRows, function(err: any, response: any) {

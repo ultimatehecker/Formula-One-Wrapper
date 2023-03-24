@@ -2,8 +2,16 @@ import getRequest from "../utils/request";
 import DriversStandings from "../config/standings/driversStandings";
 import ConstructorsStandings from "../config/standings/constructionStandings";
 import config from "../utils/config";
+import ResponsesValidator from "./responsesValidator";
 
 export default class Standings {
+
+    constructor(responsesValidator: ResponsesValidator) {
+        this.responsesValidator = responsesValidator;
+    }
+    
+    responsesValidator: ResponsesValidator;
+    
     getDriversStandings(season: string, callback: any, responsesValidator: any) {
         let url = config.baseUrl + season + "/driverStandings.json";
         getRequest(url, 0, config.defaultResponseRows, function(err: any, response: any) {

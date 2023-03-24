@@ -1,8 +1,16 @@
 import getRequest from "../utils/request";
 import RaceResult from "../config/raceResults/raceResults";
 import config from "../utils/config";
+import ResponsesValidator from "./responsesValidator";
 
 export default class RaceResults {
+
+    constructor(responsesValidator: ResponsesValidator) {
+        this.responsesValidator = responsesValidator;
+    }
+    
+    responsesValidator: ResponsesValidator;
+    
     getRaceResults(season: string, round: string, callback: any, responsesValidator: any) {
         let url = config.baseUrl + season + "/" + round + "/results.json";
         getRequest(url, 0, config.defaultResponseRows, function(err: any, response: any) {

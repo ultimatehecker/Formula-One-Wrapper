@@ -1,8 +1,16 @@
 import getRequest from "../utils/request";
 import FinishingStatusList from "../config/finishingStatuses/finishingStatusList";
 import config from "../utils/config";
+import ResponsesValidator from "./responsesValidator";
 
 export default class FinishingStatuses {
+
+    constructor(responsesValidator: ResponsesValidator) {
+        this.responsesValidator = responsesValidator;
+    }
+    
+    responsesValidator: ResponsesValidator;
+    
     getFinishingStatuses(season: any, round: any, callback: any, responsesValidator: any) {
         let url = config.baseUrl + season + "/" + round + "/status.json";
         getRequest(url, 0, config.defaultResponseRows, function(err: any, response: any) {

@@ -1,9 +1,17 @@
 import getRequest from '../utils/request';
 import Circuit from '../config/circuits/circuit';
 import CircuitsList from '../config/circuits/circuitsList';
+import ResponsesValidator from './responsesValidator';
 import config from '../utils/config';
 
 export default class Circuits {
+
+    constructor(responsesValidator: ResponsesValidator) {
+        this.responsesValidator = responsesValidator;
+    }
+    
+    responsesValidator: ResponsesValidator;
+    
     getCircuit = function(season: number, round: number, callback: any, responsesValidator: any) {
         let url = config.baseUrl + season + "/" + round + "/circuits.json";
         getRequest(url, 0, config.defaultResponseRows, function(err: any, response: any) {

@@ -2,8 +2,16 @@ import getRequest from "../utils/request";
 import Constructor from "../config/constructors/constructor";
 import ConstructorsList from "../config/constructors/constructorsList";
 import config from "../utils/config";
+import ResponsesValidator from "./responsesValidator";
 
 export default class Constructors {
+
+    constructor(responsesValidator: ResponsesValidator) {
+        this.responsesValidator = responsesValidator;
+    }
+    
+    responsesValidator: ResponsesValidator;
+    
     getConstrcutor = function( constructorId: any, callback: any, responsesValidator: any) {
         let url = config.baseUrl + "constructors/" + constructorId + ".json";
         getRequest(url, 0, config.defaultResponseRows, function(err: any, response: any) {

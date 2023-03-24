@@ -2,8 +2,16 @@ import getRequest from "../utils/request";
 import PitStop from "../config/pitStops/pitStop";
 import PitStopList from "../config/pitStops/pitStopList";
 import config from "../utils/config";
+import ResponsesValidator from "./responsesValidator";
 
 export default class PitStops {
+
+    constructor(responsesValidator: ResponsesValidator) {
+        this.responsesValidator = responsesValidator;
+    }
+    
+    responsesValidator: ResponsesValidator;
+    
     getPitStops(season: string, round: string, callback: any, pitStop: any, responsesValidator: any) {
         let url = config.baseUrl + season + "/" + round + "/pitstops/" + pitStop + ".json";
         getRequest(url, 0, config.defaultResponseRows, function(err: any, response: any) {
