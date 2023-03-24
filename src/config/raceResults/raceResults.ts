@@ -20,7 +20,7 @@ RaceResults.prototype.getDriverResult = function(pos: number) {
 
 */
 
-class RaceResults {
+class RaceResult {
     driverResults: DriverRaceResult[];
 
     constructor(driverResultsParser: any) {
@@ -37,4 +37,4 @@ class RaceResults {
     }
 }
 
-export default RaceResults;
+export default RaceResult;
