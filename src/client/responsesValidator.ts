@@ -1,4 +1,4 @@
-class ResponsesValidator {
+export default class ResponsesValidator {
     constructor(responsesValidatorParser: any) {
         this.responseWithoutRaces = responsesValidatorParser.responseWithoutRaces;
         this.responseWithoutCircuits = responsesValidatorParser.responseWithoutCircuits;
