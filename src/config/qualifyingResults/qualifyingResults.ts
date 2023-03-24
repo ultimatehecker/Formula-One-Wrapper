@@ -20,7 +20,7 @@ QualifyingResults.prototype.getDriverResult = function(pos: number) {
 
 */
 
-class QualifyingResults {
+class QualifyingResult {
     driverQualifiyingResults: DriverQualifyingResult[];
 
     constructor(driverQualifiyingResultsParser: any) {
@@ -37,4 +37,4 @@ class QualifyingResults {
     }
 }
 
-export default QualifyingResults;
+export default QualifyingResult;
