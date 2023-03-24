@@ -35,6 +35,8 @@ export default class LapTimes {
         });
     }
 
+    /*
+
     getLaps(season: string, round: string, callback: any, responsesValidator: any) {
         let url = config.baseUrl + season + "/" + round + "/laps.json";
         getRequest(url, 0, config.defaultResponseRows, function(err: any, response: any) {
@@ -49,6 +51,8 @@ export default class LapTimes {
             }
         });
     }
+
+    */
 
     fixSplitLaps(splitLaps: any) {
         var arrayWithRepeatedElems: any = [];
