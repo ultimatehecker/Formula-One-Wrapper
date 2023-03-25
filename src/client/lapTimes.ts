@@ -13,8 +13,8 @@ export default class LapTimes {
     
     responsesValidator: ResponsesValidator;
     
-    getLapTimes(season: string, round: string, callback: any, responsesValidator: any) {
-        let url = config.baseUrl + season + "/" + round + "/laps.json";
+    getLap(season: string, round: string, lap: any, callback: any, responsesValidator: any) {
+        let url = config.baseUrl + season + "/" + round + "/laps/" + lap + ".json";
         getRequest(url, 0, config.defaultResponseRows, function(err: any, response: any) {
             if (err) {
                 callback(err);
@@ -28,8 +28,8 @@ export default class LapTimes {
         });
     }
 
-    getDriverLapTimes(season: string, round: string, driverId: string, callback: any, responsesValidator: any) {
-        let url = config.baseUrl + season + "/" + round + "/drivers/" + driverId + "/laps.json";
+    getDriverLap(season: string, round: string, driverId: string, lap: any, callback: any, responsesValidator: any) {
+        let url = config.baseUrl + season + "/" + round + "/drivers/" + driverId + "/laps/" + lap + ".json";
         getRequest(url, 0, config.defaultResponseRows, function(err: any, response: any) {
             if (err) {
                 callback(err);
