@@ -1,7 +1,7 @@
-import rest from 'restler';
+import axios from 'axios';
 
 function getRequest(url: any, offset: any, limit: any, callback: any) {
-    rest.get(url + "?offset=" + offset + "&limit=" + limit).on('complete', function(response: any) {
+    axios.get(url + "?offset=" + offset + "&limit=" + limit).then(function(response: any) {
         if (response instanceof Error) {
             callback(response, null);
         }
