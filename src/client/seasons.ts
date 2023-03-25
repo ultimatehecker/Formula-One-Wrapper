@@ -11,7 +11,7 @@ export default class Seasons {
     
     responsesValidator: ResponsesValidator;
     
-    getSeasons(season: any, callback: any, responsesValidator: any) {
+    getSeason(season: any, callback: any, responsesValidator: any) {
         let url = config.baseUrl + season + ".json";
         getRequest(url, 0, config.defaultResponseRows, function(err: any, response: any) {
             if (err) {
