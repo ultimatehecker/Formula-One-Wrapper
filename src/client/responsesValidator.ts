@@ -1,13 +1,4 @@
 export default class ResponsesValidator {
-    constructor(responsesValidatorParser: any) {
-        this.responseWithoutRaces = responsesValidatorParser.responseWithoutRaces;
-        this.responseWithoutCircuits = responsesValidatorParser.responseWithoutCircuits;
-        this.responseWithoutConstructors = responsesValidatorParser.responseWithoutConstructors;
-        this.responseWithoutDrivers = responsesValidatorParser.responseWithoutDrivers;
-        this.responseWithoutStatuses = responsesValidatorParser.responseWithoutStatuses;
-        this.responseWithoutStandingsLists = responsesValidatorParser.responseWithoutStandingsLists;
-    }
-
     responseWithoutRaces(callResponse: any) {
         return callResponse["MRData"]["RaceTable"]["Races"].length === 0;
     }
