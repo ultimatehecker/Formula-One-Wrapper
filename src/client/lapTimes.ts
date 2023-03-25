@@ -1,9 +1,9 @@
 import async from 'async';
-import getRequest from "../utils/request";
-import Lap from '../config/lapTimes/lap';
-import LapList from '../config/lapTimes/lapList';
-import config from '../utils/config';
-import ResponsesValidator from './responsesValidator';
+import getRequest from "../utils/request.js";
+import Lap from '../config/lapTimes/lap.js';
+import LapList from '../config/lapTimes/lapList.js';
+import config from '../utils/config.js';
+import ResponsesValidator from './responsesValidator.js';
 
 export default class LapTimes {
 

@@ -1,7 +1,7 @@
-import getRequest from "../utils/request";
-import QualifyingResult from "../config/qualifyingResults/qualifyingResults";
-import config from "../utils/config";
-import ResponsesValidator from "./responsesValidator";
+import getRequest from "../utils/request.js";
+import QualifyingResult from "../config/qualifyingResults/qualifyingResults.js";
+import config from "../utils/config.js";
+import ResponsesValidator from "./responsesValidator.js";
 
 export default class QualifyingResults {
 

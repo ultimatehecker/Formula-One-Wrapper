@@ -1,7 +1,7 @@
-import getRequest from "../utils/request";
-import Season from "../config/seasons/season";
-import config from "../utils/config";
-import ResponsesValidator from "./responsesValidator";
+import getRequest from "../utils/request.js";
+import Season from "../config/seasons/season.js";
+import config from "../utils/config.js";
+import ResponsesValidator from "./responsesValidator.js";
 
 export default class Seasons {
 

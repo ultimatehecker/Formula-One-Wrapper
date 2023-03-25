@@ -1,4 +1,4 @@
-const ErgastClient = require('../src/index');
+const ErgastClient = require('../src/index.js');
 
 let ergastClient = new ErgastClient();
 

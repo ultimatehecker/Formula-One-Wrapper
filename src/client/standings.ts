@@ -1,8 +1,8 @@
-import getRequest from "../utils/request";
-import DriversStandings from "../config/standings/driversStandings";
-import ConstructorsStandings from "../config/standings/constructionStandings";
-import config from "../utils/config";
-import ResponsesValidator from "./responsesValidator";
+import getRequest from "../utils/request.js";
+import DriversStandings from "../config/standings/driversStandings.js";
+import ConstructorsStandings from "../config/standings/constructionStandings.js";
+import config from "../utils/config.js";
+import ResponsesValidator from "./responsesValidator.js";
 
 export default class Standings {
 

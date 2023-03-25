@@ -1,7 +1,7 @@
-import getRequest from "../utils/request";
-import FinishingStatusList from "../config/finishingStatuses/finishingStatusList";
-import config from "../utils/config";
-import ResponsesValidator from "./responsesValidator";
+import getRequest from "../utils/request.js";
+import FinishingStatusList from "../config/finishingStatuses/finishingStatusList.js";
+import config from "../utils/config.js";
+import ResponsesValidator from "./responsesValidator.js";
 
 export default class FinishingStatuses {
 

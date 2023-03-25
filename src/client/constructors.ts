@@ -1,8 +1,8 @@
-import getRequest from "../utils/request";
-import Constructor from "../config/constructors/constructor";
-import ConstructorsList from "../config/constructors/constructorsList";
-import config from "../utils/config";
-import ResponsesValidator from "./responsesValidator";
+import getRequest from "../utils/request.js";
+import Constructor from "../config/constructors/constructor.js";
+import ConstructorsList from "../config/constructors/constructorsList.js";
+import config from "../utils/config.js";
+import ResponsesValidator from "./responsesValidator.js";
 
 export default class Constructors {
 

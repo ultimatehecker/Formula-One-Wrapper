@@ -1,4 +1,4 @@
-import Constructor from "../constructors/constructor";
+import Constructor from "../constructors/constructor.js";
 
 export default class ConstructorStanding {
     constructor(constructorStandingParser: any) {

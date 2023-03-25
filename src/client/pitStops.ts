@@ -1,8 +1,8 @@
-import getRequest from "../utils/request";
-import PitStop from "../config/pitStops/pitStop";
-import PitStopList from "../config/pitStops/pitStopList";
-import config from "../utils/config";
-import ResponsesValidator from "./responsesValidator";
+import getRequest from "../utils/request.js";
+import PitStop from "../config/pitStops/pitStop.js";
+import PitStopList from "../config/pitStops/pitStopList.js";
+import config from "../utils/config.js";
+import ResponsesValidator from "./responsesValidator.js";
 
 export default class PitStops {
 

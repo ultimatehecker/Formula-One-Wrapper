@@ -1,5 +1,5 @@
 import _ from 'underscore';
-import Circuit from './circuit';
+import Circuit from './circuit.js';
 
 /*
 

@@ -1,8 +1,8 @@
-import getRequest from "../utils/request";
-import Driver from "../config/drivers/driver";
-import DriversList from "../config/drivers/driversList";
-import config from "../utils/config";
-import ResponsesValidator from "./responsesValidator";
+import getRequest from "../utils/request.js";
+import Driver from "../config/drivers/driver.js";
+import DriversList from "../config/drivers/driversList.js";
+import config from "../utils/config.js";
+import ResponsesValidator from "./responsesValidator.js";
 
 export default class Drivers {
 

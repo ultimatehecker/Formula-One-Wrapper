@@ -1,5 +1,5 @@
 import _ from 'underscore';
-import Lap from './lap';
+import Lap from './lap.js';
 
 /*
 

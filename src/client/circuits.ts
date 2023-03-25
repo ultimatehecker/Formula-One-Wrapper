@@ -1,8 +1,8 @@
-import getRequest from '../utils/request';
-import Circuit from '../config/circuits/circuit';
-import CircuitsList from '../config/circuits/circuitsList';
-import ResponsesValidator from './responsesValidator';
-import config from '../utils/config';
+import getRequest from '../utils/request.js';
+import Circuit from '../config/circuits/circuit.js';
+import CircuitsList from '../config/circuits/circuitsList.js';
+import ResponsesValidator from './responsesValidator.js';
+import config from '../utils/config.js';
 
 export default class Circuits {
 

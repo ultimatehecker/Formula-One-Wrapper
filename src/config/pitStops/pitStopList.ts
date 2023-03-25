@@ -1,5 +1,5 @@
 import _ from 'underscore';
-import PitStop from './pitStop';
+import PitStop from './pitStop.js';
 
 /*
 

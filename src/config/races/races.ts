@@ -1,4 +1,4 @@
-import Circuit from "../circuits/circuit";
+import Circuit from "../circuits/circuit.js";
 
 export default class Race {
     constructor(raceParser: any) {
