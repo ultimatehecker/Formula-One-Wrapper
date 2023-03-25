@@ -12,7 +12,7 @@ export default class PitStops {
     
     responsesValidator: ResponsesValidator;
     
-    getPitStops(season: string, round: string, callback: any, pitStop: any, responsesValidator: any) {
+    getPitStop(season: string, round: string, callback: any, pitStop: any, responsesValidator: any) {
         let url = config.baseUrl + season + "/" + round + "/pitstops/" + pitStop + ".json";
         getRequest(url, 0, config.defaultResponseRows, function(err: any, response: any) {
             if (err) {
