@@ -12,7 +12,7 @@ export default class Circuits {
     
     responsesValidator: ResponsesValidator;
     
-    getCircuit = function(season: number, round: number, callback: any, responsesValidator: any) {
+    getCircuit = function(season: number, round: number, responsesValidator: any, callback: any) {
         let url = config.baseUrl + season + "/" + round + "/circuits.json";
         getRequest(url, 0, config.defaultResponseRows, function(err: any, response: any) {
             if (err) {
@@ -27,7 +27,7 @@ export default class Circuits {
         });
     };
 
-    getCircuits = function(season: number, callback: any, responsesValidator: any) {
+    getCircuits = function(season: number, responsesValidator: any, callback: any) {
         let url = config.baseUrl + season + "/circuits.json";
         getRequest(url, 0, config.defaultResponseRows, function(err: any, response: any) {
             if (err) {

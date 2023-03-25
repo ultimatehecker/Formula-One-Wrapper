@@ -12,7 +12,7 @@ export default class Drivers {
     
     responsesValidator: ResponsesValidator;
     
-    getDriver(driverId: any, callback: any, responsesValidator: any) {
+    getDriver(driverId: any, responsesValidator: any, callback: any) {
         let url = config.baseUrl + "drivers/" + driverId + ".json";
         getRequest(url, 0, config.defaultResponseRows, function(err: any, response: any) {
             if (err) {
@@ -27,7 +27,7 @@ export default class Drivers {
         });
     }
 
-    getDrivers(year: string, callback: any, responsesValidator: any) {
+    getDrivers(year: string, responsesValidator: any, callback: any) {
         var url = config.baseUrl + year + "/drivers.json"
         getRequest(url, 0, config.defaultResponseRows, function(err: any, response: any) {
             if (err) {

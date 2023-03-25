@@ -13,7 +13,7 @@ export default class LapTimes {
     
     responsesValidator: ResponsesValidator;
     
-    getLap(season: string, round: string, lap: any, callback: any, responsesValidator: any) {
+    getLap(season: string, round: string, lap: any, responsesValidator: any, callback: any) {
         let url = config.baseUrl + season + "/" + round + "/laps/" + lap + ".json";
         getRequest(url, 0, config.defaultResponseRows, function(err: any, response: any) {
             if (err) {
@@ -28,7 +28,7 @@ export default class LapTimes {
         });
     }
 
-    getDriverLap(season: string, round: string, driverId: string, lap: any, callback: any, responsesValidator: any) {
+    getDriverLap(season: string, round: string, driverId: string, lap: any, responsesValidator: any, callback: any) {
         let url = config.baseUrl + season + "/" + round + "/drivers/" + driverId + "/laps/" + lap + ".json";
         getRequest(url, 0, config.defaultResponseRows, function(err: any, response: any) {
             if (err) {
@@ -45,7 +45,7 @@ export default class LapTimes {
 
     /*
 
-    getLaps(season: string, round: string, callback: any, responsesValidator: any) {
+    getLaps(season: string, round: string, responsesValidator: any, callback: any) {
         let url = config.baseUrl + season + "/" + round + "/laps.json";
         getRequest(url, 0, config.defaultResponseRows, function(err: any, response: any) {
             if (err) {
