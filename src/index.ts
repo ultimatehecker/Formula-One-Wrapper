@@ -1,8 +1,8 @@
-import ErgastClient from "./api/api.js";
+import F1Client from "./api/api.js";
 
-const ergastClient = new ErgastClient();
+const f1Client = new F1Client();
 
-ergastClient.getSeason(2017, function(err: any, season: any) {
+f1Client.getSeason(2017, function(err: any, season: any) {
   if (err) {
     console.error(err);
   } else {

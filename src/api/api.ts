@@ -11,7 +11,7 @@ import LapTimes from "./client/lapTimes.js";
 import PitStops from "./client/pitStops.js";
 import ResponsesValidator from "./client/responsesValidator.js";
 
-export default class ErgastClient {
+export default class F1Client {
     constructor() {
         this.responsesValidator = new ResponsesValidator();
         this.seasons = new Seasons(this.responsesValidator);
