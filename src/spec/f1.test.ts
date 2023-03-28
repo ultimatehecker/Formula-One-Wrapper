@@ -1,4 +1,4 @@
-const ErgastClient = require('../src/index.js');
+import ErgastClient from '../api.js';
 
 let ergastClient = new ErgastClient();
 

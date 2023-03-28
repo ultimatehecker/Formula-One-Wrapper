@@ -43,24 +43,43 @@ export default class LapTimes {
         });
     }
 
-    /*
-
     getLaps(season: string, round: string, responsesValidator: any, callback: any) {
-        let url = config.baseUrl + season + "/" + round + "/laps.json";
-        getRequest(url, 0, config.defaultResponseRows, function(err: any, response: any) {
-            if (err) {
-                callback(err);
+        let laps: any = [];
+        let rows = 0
+        let totalRows = 0;
+
+        async.doWhilst(
+            function(callback: any) {
+                let url = config.baseUrl + season + "/" + round + "/laps.json";
+                getRequest(url, rows, config.defaultResponseRows, function(err: any, response: any) {
+                    if (err) {
+                        callback(err);
+                    }
+                    else if (responsesValidator.responseWithoutLapTimes(response)) {
+                        callback(new Error('Invalid season/round.'));
+                    }
+                    else {
+                        laps = laps.concat(response["MRData"]["LapTable"]["Laps"]);
+                        rows += config.defaultResponseRows;
+                        totalRows = response["MRData"]["total"];
+                        callback();
+                    }
+                });
+            },
+            function() {
+                return rows < totalRows;
+            }, function(err: any) {
+                if (err) {
+                    callback(err);
+                }
+                else {
+                    callback(null, new LapList(laps));
+                }
             }
-            else if (responsesValidator.responseWithoutLapTimes(response)) {
-                callback(new Error('Invalid season/round.'));
-            }
-            else {
-                callback(null, new LapList(response["MRData"]["LapTable"]["Laps"]));
-            }
-        });
+        )
+
     }
 
-    */
 
     fixSplitLaps(splitLaps: any) {
         var arrayWithRepeatedElems: any = [];
