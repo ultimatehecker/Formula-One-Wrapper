@@ -11,8 +11,8 @@
     "ergast"
   ],
   "scripts": {
-    "build:client": "npm i && rimraf ./lib && tsc",
-    "build:website": "next build",
+    "build:client": "rimraf ./lib && tsc",
+    "build:website": "next build ./src/router",
     "start:client": "npm run build && node lib/index.js",
     "start:website": "next start",
     "dev:client": "npx nodemon",

@@ -26,7 +26,7 @@ git clone https://github.com/ultimatehecker/Formula-One-Wrapper.git && cd ./Form
 Next, you will need to install all of the npm packages and compile the Typescript. This can easily be done by doing:
 
 ```bash
-npm run build
+npm run build:client
 ```
 
 After this you are done! You can change the code however you want, just make sure to compile everything before running the code. To

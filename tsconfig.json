@@ -10,17 +10,17 @@
       "skipLibCheck": true,
       "strict": true,
       "forceConsistentCasingInFileNames": true,
-      "noEmit": true,
-      "noEmitHelpers": true,
+      "noEmit": false,
+      "noEmitHelpers": false,
       "importHelpers": true,
       "isolatedModules": true,
       "resolveJsonModule": true,
       "jsx": "preserve",
-      "incremental": true,
+      "incremental": false,
       "paths": {
         "@/*": ["./*"]
       }
   },
-  "include": ["./src/api/**/**/*"],
+  "include": ["./src/**/**/**/*"],
   "exclude": ["node_modules"]
 }
