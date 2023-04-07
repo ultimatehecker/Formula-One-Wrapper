@@ -148,15 +148,11 @@ export default class F1Client {
         });
     }
 
-    /*
-
     getLaps(season: any, round: any, callback: any) {
         this.lapTimes.getLaps(season, round, this.responsesValidator, function(err: any, laps: any) {
             callback(err, laps);
         });
     }
-
-    */
 
     getPitStop(season: any, round: any, pitStopNumber: any, callback: any) {
         this.pitStops.getPitStop(season, round, pitStopNumber, this.responsesValidator, function(err: any, pitStop: any) {
