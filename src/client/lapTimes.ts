@@ -14,7 +14,7 @@ export default class LapTimes {
     responsesValidator: ResponsesValidator;
     
     getLap(season: string, round: string, lap: any, responsesValidator: any, callback: any) {
-        let url = config.baseUrl + season + "/" + round + "/laps/" + lap + "on";
+        let url = config.baseUrl + season + "/" + round + "/laps/" + lap + ".json";
         getRequest(url, 0, config.defaultResponseRows, function(err: any, response: any) {
             if (err) {
                 callback(err);
@@ -29,7 +29,7 @@ export default class LapTimes {
     }
 
     getDriverLap(season: string, round: string, driverId: string, lap: any, responsesValidator: any, callback: any) {
-        let url = config.baseUrl + season + "/" + round + "/drivers/" + driverId + "/laps/" + lap + "on";
+        let url = config.baseUrl + season + "/" + round + "/drivers/" + driverId + "/laps/" + lap + ".json";
         getRequest(url, 0, config.defaultResponseRows, function(err: any, response: any) {
             if (err) {
                 callback(err);
@@ -50,7 +50,7 @@ export default class LapTimes {
 
         async.doWhilst(
             function(callback: any) {
-                let url = config.baseUrl + season + "/" + round + "/lapson";
+                let url = config.baseUrl + season + "/" + round + "/laps.json";
                 getRequest(url, rows, config.defaultResponseRows, function(err: any, response: any) {
                     if (err) {
                         callback(err);

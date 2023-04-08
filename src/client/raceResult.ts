@@ -12,7 +12,7 @@ export default class RaceResults {
     responsesValidator: ResponsesValidator;
     
     getRaceResults(season: string, round: string, responsesValidator: any, callback: any) {
-        let url = config.baseUrl + season + "/" + round + "/resultson";
+        let url = config.baseUrl + season + "/" + round + "/results.json";
         getRequest(url, 0, config.defaultResponseRows, function(err: any, response: any) {
             if (err) {
                 callback(err);

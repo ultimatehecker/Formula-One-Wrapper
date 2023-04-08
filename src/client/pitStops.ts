@@ -13,7 +13,7 @@ export default class PitStops {
     responsesValidator: ResponsesValidator;
     
     getPitStop(season: string, round: string, pitStop: any, responsesValidator: any, callback: any) {
-        let url = config.baseUrl + season + "/" + round + "/pitstops/" + pitStop + "on";
+        let url = config.baseUrl + season + "/" + round + "/pitstops/" + pitStop + ".json";
         getRequest(url, 0, config.defaultResponseRows, function(err: any, response: any) {
             if (err) {
                 callback(err);
@@ -28,7 +28,7 @@ export default class PitStops {
     }
 
     getDriverPitStops(season: string, round: string, driverId: string, pitStop: any, responsesValidator: any, callback: any)  {
-        let url = config.baseUrl + season + "/" + round + "/drivers/"+ driverId + "/pitstops/" + pitStop + "on";
+        let url = config.baseUrl + season + "/" + round + "/drivers/"+ driverId + "/pitstops/" + pitStop + ".json";
         getRequest(url, 0, config.defaultResponseRows, function(err: any, response: any) {
             if (err) {
                 callback(err);

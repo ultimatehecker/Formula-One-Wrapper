@@ -13,7 +13,7 @@ export default class Constructors {
     responsesValidator: ResponsesValidator;
     
     getConstructor = function( constructorId: any, responsesValidator: any, callback: any) {
-        let url = config.baseUrl + "constructors/" + constructorId + "on";
+        let url = config.baseUrl + "constructors/" + constructorId + ".json";
         getRequest(url, 0, config.defaultResponseRows, function(err: any, response: any) {
             if (err) {
                 callback(err);
@@ -28,7 +28,7 @@ export default class Constructors {
     }
 
     getConstructors = function(year: string, responsesValidator: any, callback: any) {
-        var url = config.baseUrl + year + "/constructorson"
+        var url = config.baseUrl + year + "/constructors.json"
         getRequest(url, 0, config.defaultResponseRows, function(err: any, response: any) {
             if (err) {
                 callback(err);

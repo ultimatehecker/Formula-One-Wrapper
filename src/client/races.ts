@@ -12,7 +12,7 @@ export default class Races {
     responsesValidator: ResponsesValidator;
     
     getRace(season: string, round: string, responsesValidator: any, callback: any) {
-        let url = config.baseUrl + season + "/" + round + "on";
+        let url = config.baseUrl + season + "/" + round + ".json";
         getRequest(url, 0, config.defaultResponseRows, function(err: any, response: any) {
             if (err) {
                 callback(err);
@@ -27,7 +27,7 @@ export default class Races {
     }
 
     getLastRace(responsesValidator: any, callback: any) {
-        let url = config.baseUrl + "current/laston";
+        let url = config.baseUrl + "current/last.json";
         getRequest(url, 0, config.defaultResponseRows, function(err: any, response: any) {
             if (err) {
                 callback(err);

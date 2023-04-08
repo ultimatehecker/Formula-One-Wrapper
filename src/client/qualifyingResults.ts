@@ -12,7 +12,7 @@ export default class QualifyingResults {
     responsesValidator: ResponsesValidator;
     
     getQualifyingResults(season: string, round: string, responsesValidator: any, callback: any) {
-        let url = config.baseUrl + season + "/" + round + "/qualifyingon";
+        let url = config.baseUrl + season + "/" + round + "/qualifying.json";
         getRequest(url, 0, config.defaultResponseRows, function(err: any, response: any) {
             if (err) {
                 callback(err);
