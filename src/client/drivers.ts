@@ -1,8 +1,8 @@
-import getRequest from "../utils/request.js";
-import Driver from "../config/drivers/driver.js";
-import DriversList from "../config/drivers/driversList.js";
-import config from "../utils/config.js";
-import ResponsesValidator from "./responsesValidator.js";
+import getRequest from "../utils/request";
+import Driver from "../config/drivers/driver";
+import DriversList from "../config/drivers/driversList";
+import config from "../utils/config";
+import ResponsesValidator from "./responsesValidator";
 
 export default class Drivers {
 
@@ -13,7 +13,7 @@ export default class Drivers {
     responsesValidator: ResponsesValidator;
     
     getDriver(driverId: any, responsesValidator: any, callback: any) {
-        let url = config.baseUrl + "drivers/" + driverId + ".json";
+        let url = config.baseUrl + "drivers/" + driverId + "on";
         getRequest(url, 0, config.defaultResponseRows, function(err: any, response: any) {
             if (err) {
                 callback(err);
@@ -28,7 +28,7 @@ export default class Drivers {
     }
 
     getDrivers(year: string, responsesValidator: any, callback: any) {
-        var url = config.baseUrl + year + "/drivers.json"
+        var url = config.baseUrl + year + "/driverson"
         getRequest(url, 0, config.defaultResponseRows, function(err: any, response: any) {
             if (err) {
                 callback(err);

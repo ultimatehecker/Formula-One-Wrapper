@@ -1,8 +1,8 @@
-import getRequest from '../utils/request.js';
-import Circuit from '../config/circuits/circuit.js';
-import CircuitsList from '../config/circuits/circuitsList.js';
-import ResponsesValidator from './responsesValidator.js';
-import config from '../utils/config.js';
+import getRequest from '../utils/request';
+import Circuit from '../config/circuits/circuit';
+import CircuitsList from '../config/circuits/circuitsList';
+import ResponsesValidator from './responsesValidator';
+import config from '../utils/config';
 
 export default class Circuits {
 
@@ -13,7 +13,7 @@ export default class Circuits {
     responsesValidator: ResponsesValidator;
     
     getCircuit = function(season: number, round: number, responsesValidator: any, callback: any) {
-        let url = config.baseUrl + season + "/" + round + "/circuits.json";
+        let url = config.baseUrl + season + "/" + round + "/circuitson";
         getRequest(url, 0, config.defaultResponseRows, function(err: any, response: any) {
             if (err) {
                 callback(err);
@@ -28,7 +28,7 @@ export default class Circuits {
     };
 
     getCircuits = function(season: number, responsesValidator: any, callback: any) {
-        let url = config.baseUrl + season + "/circuits.json";
+        let url = config.baseUrl + season + "/circuitson";
         getRequest(url, 0, config.defaultResponseRows, function(err: any, response: any) {
             if (err) {
                 callback(err);

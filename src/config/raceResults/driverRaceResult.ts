@@ -1,7 +1,7 @@
-import Driver from "../drivers/driver.js";
-import Constructor from "../constructors/constructor.js";
-import Time from "../lapTimes/time.js";
-import FastestLap from "../lapTimes/fastestLap.js";
+import Driver from "../drivers/driver";
+import Constructor from "../constructors/constructor";
+import Time from "../lapTimes/time";
+import FastestLap from "../lapTimes/fastestLap";
 
 export default class DriverRaceResult {
     constructor(raceResultParser: any) {

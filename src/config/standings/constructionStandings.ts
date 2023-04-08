@@ -1,5 +1,5 @@
 import _ from "underscore";
-import ConstructorStanding from "./constructorStanding.js";
+import ConstructorStanding from "./constructorStanding";
 
 /*
 

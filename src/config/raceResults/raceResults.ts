@@ -1,5 +1,5 @@
 import _ from 'underscore';
-import DriverRaceResult from './driverRaceResult.js';
+import DriverRaceResult from './driverRaceResult';
 
 /*
 

@@ -1,5 +1,5 @@
-import Driver from "../drivers/driver.js";
-import Constructor from "../constructors/constructor.js";
+import Driver from "../drivers/driver";
+import Constructor from "../constructors/constructor";
 
 export default class DriverQualifyingResult {
     constructor(qualifyingResultParser: any) {

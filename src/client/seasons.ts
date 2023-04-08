@@ -1,7 +1,7 @@
-import getRequest from "../utils/request.js";
-import Season from "../config/seasons/season.js";
-import config from "../utils/config.js";
-import ResponsesValidator from "./responsesValidator.js";
+import getRequest from "../utils/request";
+import Season from "../config/seasons/season";
+import config from "../utils/config";
+import ResponsesValidator from "./responsesValidator";
 
 export default class Seasons {
 
@@ -12,7 +12,7 @@ export default class Seasons {
     responsesValidator: ResponsesValidator;
     
     getSeason(season: any, responsesValidator: any, callback: any) {
-        let url = config.baseUrl + season + ".json";
+        let url = config.baseUrl + season + "on";
         getRequest(url, 0, config.defaultResponseRows, function(err: any, response: any) {
             if (err) {
                 callback(err);

@@ -1,9 +1,9 @@
 import async from 'async';
-import getRequest from "../utils/request.js";
-import Lap from '../config/lapTimes/lap.js';
-import LapList from '../config/lapTimes/lapList.js';
-import config from '../utils/config.js';
-import ResponsesValidator from './responsesValidator.js';
+import getRequest from "../utils/request";
+import Lap from '../config/lapTimes/lap';
+import LapList from '../config/lapTimes/lapList';
+import config from '../utils/config';
+import ResponsesValidator from './responsesValidator';
 
 export default class LapTimes {
 
@@ -14,7 +14,7 @@ export default class LapTimes {
     responsesValidator: ResponsesValidator;
     
     getLap(season: string, round: string, lap: any, responsesValidator: any, callback: any) {
-        let url = config.baseUrl + season + "/" + round + "/laps/" + lap + ".json";
+        let url = config.baseUrl + season + "/" + round + "/laps/" + lap + "on";
         getRequest(url, 0, config.defaultResponseRows, function(err: any, response: any) {
             if (err) {
                 callback(err);
@@ -29,7 +29,7 @@ export default class LapTimes {
     }
 
     getDriverLap(season: string, round: string, driverId: string, lap: any, responsesValidator: any, callback: any) {
-        let url = config.baseUrl + season + "/" + round + "/drivers/" + driverId + "/laps/" + lap + ".json";
+        let url = config.baseUrl + season + "/" + round + "/drivers/" + driverId + "/laps/" + lap + "on";
         getRequest(url, 0, config.defaultResponseRows, function(err: any, response: any) {
             if (err) {
                 callback(err);
@@ -50,7 +50,7 @@ export default class LapTimes {
 
         async.doWhilst(
             function(callback: any) {
-                let url = config.baseUrl + season + "/" + round + "/laps.json";
+                let url = config.baseUrl + season + "/" + round + "/lapson";
                 getRequest(url, rows, config.defaultResponseRows, function(err: any, response: any) {
                     if (err) {
                         callback(err);

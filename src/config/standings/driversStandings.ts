@@ -1,5 +1,5 @@
 import _ from "underscore";
-import DriverStanding from "./driverStanding.js";
+import DriverStanding from "./driverStanding";
 
 /*
 

@@ -1,7 +1,7 @@
-import getRequest from "../utils/request.js";
-import RaceResult from "../config/raceResults/raceResults.js";
-import config from "../utils/config.js";
-import ResponsesValidator from "./responsesValidator.js";
+import getRequest from "../utils/request";
+import RaceResult from "../config/raceResults/raceResults";
+import config from "../utils/config";
+import ResponsesValidator from "./responsesValidator";
 
 export default class RaceResults {
 
@@ -12,7 +12,7 @@ export default class RaceResults {
     responsesValidator: ResponsesValidator;
     
     getRaceResults(season: string, round: string, responsesValidator: any, callback: any) {
-        let url = config.baseUrl + season + "/" + round + "/results.json";
+        let url = config.baseUrl + season + "/" + round + "/resultson";
         getRequest(url, 0, config.defaultResponseRows, function(err: any, response: any) {
             if (err) {
                 callback(err);

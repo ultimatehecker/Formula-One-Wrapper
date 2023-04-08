@@ -1,7 +1,7 @@
-import getRequest from "../utils/request.js";
-import Race from "../config/races/races.js";
-import config from "../utils/config.js";
-import ResponsesValidator from "./responsesValidator.js";
+import getRequest from "../utils/request";
+import Race from "../config/races/races";
+import config from "../utils/config";
+import ResponsesValidator from "./responsesValidator";
 
 export default class Races {
 
@@ -12,7 +12,7 @@ export default class Races {
     responsesValidator: ResponsesValidator;
     
     getRace(season: string, round: string, responsesValidator: any, callback: any) {
-        let url = config.baseUrl + season + "/" + round + ".json";
+        let url = config.baseUrl + season + "/" + round + "on";
         getRequest(url, 0, config.defaultResponseRows, function(err: any, response: any) {
             if (err) {
                 callback(err);
@@ -27,7 +27,7 @@ export default class Races {
     }
 
     getLastRace(responsesValidator: any, callback: any) {
-        let url = config.baseUrl + "current/last.json";
+        let url = config.baseUrl + "current/laston";
         getRequest(url, 0, config.defaultResponseRows, function(err: any, response: any) {
             if (err) {
                 callback(err);

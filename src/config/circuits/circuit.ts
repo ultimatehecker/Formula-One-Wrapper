@@ -1,4 +1,4 @@
-import LocationFinder from './locationFinder.js';
+import LocationFinder from './locationFinder';
 
 export default class Circuit {
     constructor(circuitParser: any) {

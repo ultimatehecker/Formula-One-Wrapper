@@ -1,5 +1,5 @@
 import _ from 'underscore';
-import Race from '../races/races.js';
+import Race from '../races/races';
 
 /*
 

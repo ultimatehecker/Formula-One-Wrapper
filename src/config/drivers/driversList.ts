@@ -1,5 +1,5 @@
 import _ from 'underscore';
-import Driver from './driver.js';
+import Driver from './driver';
 
 /*
 

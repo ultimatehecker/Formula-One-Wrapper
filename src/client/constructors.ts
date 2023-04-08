@@ -1,8 +1,8 @@
-import getRequest from "../utils/request.js";
-import Constructor from "../config/constructors/constructor.js";
-import ConstructorsList from "../config/constructors/constructorsList.js";
-import config from "../utils/config.js";
-import ResponsesValidator from "./responsesValidator.js";
+import getRequest from "../utils/request";
+import Constructor from "../config/constructors/constructor";
+import ConstructorsList from "../config/constructors/constructorsList";
+import config from "../utils/config";
+import ResponsesValidator from "./responsesValidator";
 
 export default class Constructors {
 
@@ -13,7 +13,7 @@ export default class Constructors {
     responsesValidator: ResponsesValidator;
     
     getConstructor = function( constructorId: any, responsesValidator: any, callback: any) {
-        let url = config.baseUrl + "constructors/" + constructorId + ".json";
+        let url = config.baseUrl + "constructors/" + constructorId + "on";
         getRequest(url, 0, config.defaultResponseRows, function(err: any, response: any) {
             if (err) {
                 callback(err);
@@ -28,7 +28,7 @@ export default class Constructors {
     }
 
     getConstructors = function(year: string, responsesValidator: any, callback: any) {
-        var url = config.baseUrl + year + "/constructors.json"
+        var url = config.baseUrl + year + "/constructorson"
         getRequest(url, 0, config.defaultResponseRows, function(err: any, response: any) {
             if (err) {
                 callback(err);

@@ -1,7 +1,7 @@
-import getRequest from "../utils/request.js";
-import QualifyingResult from "../config/qualifyingResults/qualifyingResults.js";
-import config from "../utils/config.js";
-import ResponsesValidator from "./responsesValidator.js";
+import getRequest from "../utils/request";
+import QualifyingResult from "../config/qualifyingResults/qualifyingResults";
+import config from "../utils/config";
+import ResponsesValidator from "./responsesValidator";
 
 export default class QualifyingResults {
 
@@ -12,7 +12,7 @@ export default class QualifyingResults {
     responsesValidator: ResponsesValidator;
     
     getQualifyingResults(season: string, round: string, responsesValidator: any, callback: any) {
-        let url = config.baseUrl + season + "/" + round + "/qualifying.json";
+        let url = config.baseUrl + season + "/" + round + "/qualifyingon";
         getRequest(url, 0, config.defaultResponseRows, function(err: any, response: any) {
             if (err) {
                 callback(err);

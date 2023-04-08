@@ -1,5 +1,5 @@
-import AverageSpeed from "./averageSpeed.js";
-import Time from "./time.js";
+import AverageSpeed from "./averageSpeed";
+import Time from "./time";
 
 export default class FastestLap {
     constructor(fastestLapParser: any) {

@@ -1,5 +1,5 @@
 import _ from 'underscore';
-import FinishingStatus from './finishingStatus.js';
+import FinishingStatus from './finishingStatus';
 
 /*
 

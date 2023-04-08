@@ -1,5 +1,5 @@
 import _ from 'underscore';
-import Constructor from './constructor.js';
+import Constructor from './constructor';
 
 /*
 

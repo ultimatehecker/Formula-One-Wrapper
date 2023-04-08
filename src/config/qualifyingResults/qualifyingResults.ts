@@ -1,5 +1,5 @@
 import _ from 'underscore';
-import DriverQualifyingResult from './driverQualifiyingResult.js';
+import DriverQualifyingResult from './driverQualifiyingResult';
 
 /*
 

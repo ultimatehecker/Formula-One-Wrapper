@@ -1,8 +1,8 @@
-import getRequest from "../utils/request.js";
-import PitStop from "../config/pitStops/pitStop.js";
-import PitStopList from "../config/pitStops/pitStopList.js";
-import config from "../utils/config.js";
-import ResponsesValidator from "./responsesValidator.js";
+import getRequest from "../utils/request";
+import PitStop from "../config/pitStops/pitStop";
+import PitStopList from "../config/pitStops/pitStopList";
+import config from "../utils/config";
+import ResponsesValidator from "./responsesValidator";
 
 export default class PitStops {
 
@@ -13,7 +13,7 @@ export default class PitStops {
     responsesValidator: ResponsesValidator;
     
     getPitStop(season: string, round: string, pitStop: any, responsesValidator: any, callback: any) {
-        let url = config.baseUrl + season + "/" + round + "/pitstops/" + pitStop + ".json";
+        let url = config.baseUrl + season + "/" + round + "/pitstops/" + pitStop + "on";
         getRequest(url, 0, config.defaultResponseRows, function(err: any, response: any) {
             if (err) {
                 callback(err);
@@ -28,7 +28,7 @@ export default class PitStops {
     }
 
     getDriverPitStops(season: string, round: string, driverId: string, pitStop: any, responsesValidator: any, callback: any)  {
-        let url = config.baseUrl + season + "/" + round + "/drivers/"+ driverId + "/pitstops/" + pitStop + ".json";
+        let url = config.baseUrl + season + "/" + round + "/drivers/"+ driverId + "/pitstops/" + pitStop + "on";
         getRequest(url, 0, config.defaultResponseRows, function(err: any, response: any) {
             if (err) {
                 callback(err);
