@@ -1,15 +1,15 @@
-import Drivers from "./client/drivers.js";
-import Constructors from "./client/constructors.js";
-import Races from "./client/races.js";
-import Seasons from "./client/seasons.js";
-import RaceResults from "./client/raceResult.js";
-import QualifyingResults from "./client/qualifyingResults.js";
-import Standings from "./client/standings.js";
-import Circuits from "./client/circuits.js";
-import FinishingStatuses from "./client/finishingStatuses.js";
-import LapTimes from "./client/lapTimes.js";
-import PitStops from "./client/pitStops.js";
-import ResponsesValidator from "./client/responsesValidator.js";
+import Drivers from "./client/drivers";
+import Constructors from "./client/constructors";
+import Races from "./client/races";
+import Seasons from "./client/seasons";
+import RaceResults from "./client/raceResult";
+import QualifyingResults from "./client/qualifyingResults";
+import Standings from "./client/standings";
+import Circuits from "./client/circuits";
+import FinishingStatuses from "./client/finishingStatuses";
+import LapTimes from "./client/lapTimes";
+import PitStops from "./client/pitStops";
+import ResponsesValidator from "./client/responsesValidator";
 
 export default class F1Client {
     constructor() {
