@@ -1,16 +1,25 @@
 {
+  "name": "router",
+  "version": "0.0.0",
   "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
     "build": "turbo run build",
-    "clean": "turbo run clean",
-    "dev": "turbo run dev --no-cache  --continue",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "dev": "turbo run dev",
     "lint": "turbo run lint",
-    "test": "turbo run test"
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
-    "prettier": "^2.7.1",
+    "eslint-config-custom": "*",
+    "prettier": "latest",
     "turbo": "latest"
   },
-  "packageManager": "pnpm@7.15.0"
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "dependencies": {},
+  "packageManager": "npm@9.5.0"
 }
