@@ -22,7 +22,7 @@ export default class Constructors {
                 callback(new Error('Invalid constructor ID.'));
             }
             else {
-                callback(null, new ConstructorsList(response["MRData"]["ConstructorTable"]["Constructors"][0]));
+                callback(null, new ConstructorsList(response.data.MRData.ConstructorTable.Constructors[0]));
             }
         });
     }
@@ -37,7 +37,7 @@ export default class Constructors {
                 callback(new Error('Invalid year.'));
             }
             else {
-                callback(null, new Constructor(response["MRData"]["ConstructorTable"]["Constructors"][0]));
+                callback(null, new Constructor(response.data.MRData.ConstructorTable.Constructors[0]));
             }
         });
     }

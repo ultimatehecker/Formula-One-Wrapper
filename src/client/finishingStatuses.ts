@@ -21,7 +21,7 @@ export default class FinishingStatuses {
                 callback(new Error('Invalid season/round.'));
             }
             else {
-                callback(null, new FinishingStatusList(response["MRData"]["StatusTable"]["Status"]));
+                callback(null, new FinishingStatusList(response.data.MRData.StatusTable.Status));
             }
         });
     }
@@ -36,7 +36,7 @@ export default class FinishingStatuses {
                 callback(new Error('Invalid season.'));
             }
             else {
-                callback(null, new FinishingStatusList(response["MRData"]["StatusTable"]["Status"]));
+                callback(null, new FinishingStatusList(response.data.MRData.StatusTable.Status));
             }
         });
     }

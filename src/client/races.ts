@@ -21,7 +21,7 @@ export default class Races {
                 callback(new Error('Invalid season/round.'));
             }
             else {
-                callback(null, new Race(response["MRData"]["RaceTable"]["Races"][0]));
+                callback(null, new Race(response.data.MRData.RaceTable.Races[0]));
             }
         });
     }

@@ -22,7 +22,7 @@ export default class Standings {
                 callback(new Error('Invalid season.'));
             }
             else {
-                callback(null, new DriversStandings(response["MRData"]["StandingsTable"]["StandingsLists"][0]["DriverStandings"]));
+                callback(null, new DriversStandings(response.data.MRData.StandingsTable.StandingsLists[0].DriversStandings));
             }
         });
     }
@@ -37,7 +37,7 @@ export default class Standings {
                 callback(new Error('Invalid season/round.'));
             }
             else {
-                callback(null, new DriversStandings(response["MRData"]["StandingsTable"]["StandingsLists"][0]["DriverStandings"]));
+                callback(null, new DriversStandings(response.data.MRData.StandingsTable.StandingsLists[0].DriversStandings));
             }
         });
     }
@@ -52,7 +52,7 @@ export default class Standings {
                 callback(new Error('Invalid season.'));
             }
             else {
-                callback(null, new ConstructorsStandings(response["MRData"]["StandingsTable"]["StandingsLists"][0]["ConstructorStandings"]));
+                callback(null, new ConstructorsStandings(response.data.MRData.StandingsTable.StandingsLists[0].ConstructorsStandings));
             }
         });
     }
@@ -67,7 +67,7 @@ export default class Standings {
                 callback(new Error('Invalid season/round.'));
             }
             else {
-                callback(null, new ConstructorsStandings(response["MRData"]["StandingsTable"]["StandingsLists"][0]["ConstructorStandings"]));
+                callback(null, new ConstructorsStandings(response.data.MRData.StandingsTable.StandingsLists[0].ConstructorsStandings));
             }
         });
     }

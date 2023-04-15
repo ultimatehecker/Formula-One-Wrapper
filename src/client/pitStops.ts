@@ -22,7 +22,7 @@ export default class PitStops {
                 callback(new Error('Invalid season/round/pitStop.'));
             }
             else {
-                callback(null, new PitStopList(response["MRData"]["RaceTable"]["Races"][0]["PitStops"]));
+                callback(null, new PitStopList(response.data.MRData.RaceTable.Races[0].PitStops));
             }
         });
     }
@@ -37,7 +37,7 @@ export default class PitStops {
                 callback(new Error('Invalid season/round/pitStop/driverId.'));
             }
             else {
-                callback(null, new PitStop(response["MRData"]["RaceTable"]["Races"][0]["PitStops"][0]));
+                callback(null, new PitStop(response.data.MRData.RaceTable.Races[0].PitStops[0]));
             }
         });
     }

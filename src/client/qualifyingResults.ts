@@ -21,7 +21,7 @@ export default class QualifyingResults {
                 callback(new Error('Invalid season/round.'));
             }
             else {
-                callback(null, new QualifyingResult(response["MRData"]["RaceTable"]["Races"][0]["QualifyingResults"]));
+                callback(null, new QualifyingResult(response.data.MRData.RaceTable.Races[0].QualifyingResults));
             }
         });
     }

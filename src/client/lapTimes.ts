@@ -23,7 +23,7 @@ export default class LapTimes {
                 callback(new Error('Invalid season/round.'));
             }
             else {
-                callback(null, new LapList(response["MRData"]["LapTable"]["Laps"]));
+                callback(null, new LapList(response.data.MRData.LapTable.Laps));
             }
         });
     }
@@ -38,7 +38,7 @@ export default class LapTimes {
                 callback(new Error('Invalid season/round/driver ID.'));
             }
             else {
-                callback(null, new LapList(response["MRData"]["LapTable"]["Laps"]));
+                callback(null, new LapList(response.data.MRData.LapTable.Laps));
             }
         });
     }
@@ -59,9 +59,9 @@ export default class LapTimes {
                         callback(new Error('Invalid season/round.'));
                     }
                     else {
-                        laps = laps.concat(response["MRData"]["LapTable"]["Laps"]);
+                        laps = laps.concat(response.data.MRData.LapTable.Laps);
                         rows += config.defaultResponseRows;
-                        totalRows = response["MRData"]["total"];
+                        totalRows = response.data.MRData.total;
                         callback();
                     }
                 });

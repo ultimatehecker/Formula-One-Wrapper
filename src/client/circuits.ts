@@ -22,7 +22,7 @@ export default class Circuits {
                 callback(new Error('Invalid season/round.'));
             }
             else {
-                callback(null, new Circuit(response["MRData"]["CircuitTable"]["Circuits"][0]));
+                callback(null, new Circuit(response.data.MRData.CircuitTable.Circuits[0]));
             }
         });
     };
@@ -37,7 +37,7 @@ export default class Circuits {
                 callback(new Error('Invalid season/round.'));
             }
             else {
-                callback(null, new CircuitsList(response["MRData"]["CircuitTable"]["Circuits"]));
+                callback(null, new CircuitsList(response.data.MRData.CircuitTable.Circuits));
             }
         });
     };

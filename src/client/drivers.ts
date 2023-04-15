@@ -22,7 +22,7 @@ export default class Drivers {
                 callback(new Error('Invalid driver ID.'));
             }
             else {
-                callback(null, new Driver(response["MRData"]["DriverTable"]["Drivers"][0]));
+                callback(null, new Driver(response.data.MRData.DriverTable.Drivers[0]));
             }
         });
     }
@@ -37,7 +37,7 @@ export default class Drivers {
                 callback(new Error('Invalid year.'));
             }
             else {
-                callback(null, new DriversList(response["MRData"]["DriverTable"]["Drivers"]));
+                callback(null, new DriversList(response.data.MRData.DriverTable.Drivers));
             }
         });
     }
