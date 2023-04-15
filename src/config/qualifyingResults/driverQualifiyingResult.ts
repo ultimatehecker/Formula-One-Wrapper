@@ -2,6 +2,15 @@ import Driver from "../drivers/driver";
 import Constructor from "../constructors/constructor";
 
 export default class DriverQualifyingResult {
+
+    public number: number;
+    public position: number;
+    public driver: Driver;
+    public constructorName: Constructor;
+    public q1: any;
+    public q2: any;
+    public q3: any;
+
     constructor(qualifyingResultParser: any) {
         this.number = parseInt(qualifyingResultParser.number);
         this.position = parseInt(qualifyingResultParser.position);
@@ -11,12 +20,4 @@ export default class DriverQualifyingResult {
         this.q2 = qualifyingResultParser.Q2 || null;
         this.q3 = qualifyingResultParser.Q3 || null;
     }
-
-    number: number
-    position: number
-    driver: Driver
-    constructorName: Constructor
-    q1: any
-    q2: any
-    q3: any
 }

@@ -4,6 +4,18 @@ import Time from "../lapTimes/time";
 import FastestLap from "../lapTimes/fastestLap";
 
 export default class DriverRaceResult {
+
+    public number: number;
+    public pos: number;
+    public points: number;
+    public driver: Driver;
+    public constructorName: Constructor;
+    public grid: number;
+    public laps: number;
+    public status: any;
+    public time: Time | null;
+    public fastestLap: FastestLap | null;
+
     constructor(raceResultParser: any) {
         this.number = parseInt(raceResultParser.number);
         this.pos = parseInt(raceResultParser.pos);
@@ -14,17 +26,6 @@ export default class DriverRaceResult {
         this.laps = parseInt(raceResultParser.laps);
         this.status = raceResultParser.status;
         this.time = raceResultParser.Time ? new Time(raceResultParser.Time) : this.time = null;
-        this.fastestLap = raceResultParser.FastestLap ? new FastestLap(raceResultParser.FastestLap) : this.fastestLap = null;
+        this.fastestLap = raceResultParser.fastestLap ? new FastestLap(raceResultParser.fastestLap) : this.fastestLap = null;
     }
-
-    number: number
-    pos: number
-    points: number
-    driver: Driver
-    constructorName: Constructor
-    grid: number
-    laps: number
-    status: any
-    time: Time | null
-    fastestLap: FastestLap | null
 }
