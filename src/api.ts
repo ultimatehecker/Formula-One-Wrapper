@@ -44,125 +44,167 @@ export default class F1Client {
         this.seasons.getSeason(year, this.responsesValidator, function(err: any, season: any) {
             callback(err, season);
         });
+
+        console.log("Successfully invoked methord getSeason");
     }
 
     getRace(season: any, round: any, callback: any) {
         this.races.getRace(season, round, this.responsesValidator, function(err: any, race: any) {
             callback(err, race);
         });
+
+        console.log("Successfully invoked methord getRace");
     }
 
     getLastRace(callback: any) {
         this.races.getLastRace(this.responsesValidator, function(err: any, race: any) {
             callback(err, race)
         });
+
+        console.log("Successfully invoked methord getLastRace");
     }
 
     getRaceResults(season: any, round: any, callback: any) {
         this.raceResults.getRaceResults(season, round, this.responsesValidator, function(err: any, raceResults: any) {
             callback(err, raceResults);
         });
+
+        console.log("Successfully invoked methord getRaceResults");
     }
 
     getQualifyingResults(season: any, round: any, callback: any) {
         this.qualifyingResults.getQualifyingResults(season, round, this.responsesValidator, function(err: any, qualifyingResults: any) {
             callback(err, qualifyingResults);
         });
+
+        console.log("Successfully invoked methord getQualifyingResults");
     }
 
     getDriverStandings(season: any, callback: any) {
         this.standings.getDriverStandings(season, this.responsesValidator, function(err: any, driverStandings: any) {
             callback(err, driverStandings);
         });
+
+        console.log("Successfully invoked methord getDriverStandings");
     }
 
     getDriverStandingAfterRound(season: any, round: any, callback: any) {
         this.standings.getDriverStandingAfterRound(season, round, this.responsesValidator, function(err: any, driverStandings: any) {
             callback(err, driverStandings);
         });
+
+        console.log("Successfully invoked methord getDriverStandingAfterRound");
     }
 
     getConstructorStandings(season: any, callback: any) {
         this.standings.getConstructorStandings(season, this.responsesValidator, function(err: any, constructorStandings: any) {
             callback(err, constructorStandings);
         });
+
+        console.log("Successfully invoked methord getConstructorStandings");
     }
 
     getConstructorStandingAfterRound(season: any, round: any, callback: any) {
         this.standings.getConstructorStandingAfterRound(season, round, this.responsesValidator, function(err: any, constructorStandings: any) {
             callback(err, constructorStandings);
         });
+
+        console.log("Successfully invoked methord getConstructorStandingAfterRound");
     }
 
     getDriver(driverId: any, callback: any) {
         this.drivers.getDriver(driverId, this.responsesValidator, function(err: any, driver: any) {
             callback(err, driver);
         });
+
+        console.log("Successfully invoked methord getDriver");
     }
 
     getDrivers(year: any, callback: any) {
         this.drivers.getDrivers(year, this.responsesValidator, function(err: any, drivers: any) {
             callback(err, drivers);
         });
+
+        console.log("Successfully invoked methord getDrivers");
     }
 
     getConstructor(constructorId: any, callback: any) {
         this.constructors.getConstructor(constructorId, this.responsesValidator, function(err: any, constructor: any) {
             callback(err, constructor);
         });
+
+        console.log("Successfully invoked methord getConstructor");
     }
 
     getConstructors(year: any, callback: any) {
         this.constructors.getConstructors(year, this.responsesValidator, function(err: any, constructors: any) {
             callback(err, constructors);
         });
+
+        console.log("Successfully invoked methord getConstructors");
     }
 
     getCircuit(circuitId: any, round: any, callback: any) {
         this.circuits.getCircuit(circuitId, round, this.responsesValidator, function(err: any, circuit: any) {
             callback(err, circuit);
         });
+
+        console.log("Successfully invoked methord getCircuit");
     }
 
     getCircuits(year: any, callback: any) {
         this.circuits.getCircuits(year, this.responsesValidator, function(err: any, circuits: any) {
             callback(err, circuits);
         });
+
+        console.log("Successfully invoked methord getCircuits");
     }
 
     getFinishingStatuses(season: any, round: any, callback: any) {
         this.finishingStatuses.getFinishingStatuses(season, round, this.responsesValidator, function(err: any, finishingStatuses: any) {
             callback(err, finishingStatuses);
         });
+
+        console.log("Successfully invoked methord getFinishingStatuses");
     }
 
     getYearFinishingStatuses(season: any, callback: any) {
         this.finishingStatuses.getYearFinishingStatuses(season, this.responsesValidator, function(err: any, finishingStatuses: any) {
             callback(err, finishingStatuses);
         });
+
+        console.log("Successfully invoked methord getYearFinishingStatuses");
     }
 
     getLap(season: any, round: any, lapNumber: any, callback: any) {
         this.lapTimes.getLap(season, round, lapNumber, this.responsesValidator, function(err: any, lap: any) {
             callback(err, lap);
         });
+
+        console.log("Successfully invoked methord getLap");
     }
 
     getLaps(season: any, round: any, callback: any) {
         this.lapTimes.getLaps(season, round, this.responsesValidator, function(err: any, laps: any) {
             callback(err, laps);
         });
+
+        console.log("Successfully invoked methord getLaps");
     }
 
     getPitStop(season: any, round: any, pitStopNumber: any, callback: any) {
         this.pitStops.getPitStop(season, round, pitStopNumber, this.responsesValidator, function(err: any, pitStop: any) {
             callback(err, pitStop);
         });
+
+        console.log("Successfully invoked methord getPitStop");
     }
 
     getDriverPitStops(season: any, round: any, driverId: any, pitStopNumber: any,  callback: any) {
         this.pitStops.getDriverPitStops(season, round, driverId, pitStopNumber, this.responsesValidator, function(err: any, pitStops: any) {
             callback(err, pitStops);
         });
+
+        console.log("Successfully invoked methord getDriverPitStops");
     }
 }
