@@ -2,7 +2,6 @@ import axios from 'axios';
 
 function getRequest(url: any, offset: any, limit: any, callback: any) {
     axios.get(url + "?offset=" + offset + "&limit=" + limit).then(function(response: any) {
-        console.log(response);
         if (response instanceof Error) {
             callback(response, null);
         }
