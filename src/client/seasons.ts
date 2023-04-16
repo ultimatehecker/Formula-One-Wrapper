@@ -21,7 +21,7 @@ export default class Seasons {
                 callback(new Error('Invalid season.'));
             }
             else {
-                callback(null, new Season(response.data.MRData.RaceTable.Races[0]));
+                callback(null, new Season(response.data.MRData.RaceTable.Races));
             }
         });
     }
