@@ -11,7 +11,7 @@ export default class FinishingStatuses {
     
     responsesValidator: ResponsesValidator;
     
-    getFinishingStatuses(season: any, round: any, responsesValidator: any, callback: any) {
+    getFinishingStatuses(season: number, round: number, responsesValidator: any, callback: any) {
         let url = config.baseUrl + season + "/" + round + "/status.json";
         getRequest(url, 0, config.defaultResponseRows, function(err: any, response: any) {
             if (err) {
@@ -26,7 +26,7 @@ export default class FinishingStatuses {
         });
     }
 
-    getYearFinishingStatuses(season: string, responsesValidator: any, callback: any) {
+    getYearFinishingStatuses(season: number, responsesValidator: any, callback: any) {
         let url = config.baseUrl + season + "/status.json"
         getRequest(url, 0, config.defaultResponseRows, function(err: any, response: any) {
             if (err) {

@@ -12,7 +12,7 @@ export default class Constructors {
     
     responsesValidator: ResponsesValidator;
     
-    getConstructor = function( constructorId: any, responsesValidator: any, callback: any) {
+    getConstructor = function( constructorId: string, responsesValidator: any, callback: any) {
         let url = config.baseUrl + "constructors/" + constructorId + ".json";
         getRequest(url, 0, config.defaultResponseRows, function(err: any, response: any) {
             if (err) {

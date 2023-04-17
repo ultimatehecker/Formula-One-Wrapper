@@ -11,7 +11,7 @@ export default class Races {
     
     responsesValidator: ResponsesValidator;
     
-    getRace(season: string, round: string, responsesValidator: any, callback: any) {
+    getRace(season: number, round: number, responsesValidator: any, callback: any) {
         let url = config.baseUrl + season + "/" + round + ".json";
         getRequest(url, 0, config.defaultResponseRows, function(err: any, response: any) {
             if (err) {
@@ -21,6 +21,7 @@ export default class Races {
                 callback(new Error('Invalid season/round.'));
             }
             else {
+                console.log(response.data.MRData.RaceTable.Races);
                 callback(null, new Race(response.data.MRData.RaceTable.Races[0]));
             }
         });

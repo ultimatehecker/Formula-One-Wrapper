@@ -12,7 +12,7 @@ export default class Standings {
     
     responsesValidator: ResponsesValidator;
     
-    getDriverStandings(season: string, responsesValidator: any, callback: any) {
+    getDriverStandings(season: number, responsesValidator: any, callback: any) {
         let url = config.baseUrl + season + "/driverStandings.json";
         getRequest(url, 0, config.defaultResponseRows, function(err: any, response: any) {
             if (err) {
@@ -27,7 +27,7 @@ export default class Standings {
         });
     }
 
-    getDriverStandingAfterRound(season: string, round: string, responsesValidator: any, callback: any) {
+    getDriverStandingAfterRound(season: number, round: number, responsesValidator: any, callback: any) {
         let url = config.baseUrl + season + "/" + round + "/driverStandings.json";
         getRequest(url, 0, config.defaultResponseRows, function(err: any, response: any) {
             if (err) {
@@ -42,7 +42,7 @@ export default class Standings {
         });
     }
 
-    getConstructorStandings(season: string, responsesValidator: any, callback: any) {
+    getConstructorStandings(season: number, responsesValidator: any, callback: any) {
         let url = config.baseUrl + season + "/constructorStandings.json";
         getRequest(url, 0, config.defaultResponseRows, function(err: any, response: any) {
             if (err) {
@@ -57,7 +57,7 @@ export default class Standings {
         });
     }
 
-    getConstructorStandingAfterRound(season: string, round: string, responsesValidator: any, callback: any) {
+    getConstructorStandingAfterRound(season: number, round: number, responsesValidator: any, callback: any) {
         let url = config.baseUrl + season + "/" + round + "/constructorStandings.json";
         getRequest(url, 0, config.defaultResponseRows, function(err: any, response: any) {
             if (err) {
