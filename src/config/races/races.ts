@@ -7,8 +7,8 @@ export default class Race {
     public url: string;
     public raceName: string;
     public circuit: Circuit;
-    public date: any;
-    public time: any;
+    public date: number;
+    public time: number;
 
 
     constructor(raceParser: any) {

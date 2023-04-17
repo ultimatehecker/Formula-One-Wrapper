@@ -12,7 +12,7 @@ export default class DriverRaceResult {
     public constructorName: Constructor;
     public grid: number;
     public laps: number;
-    public status: any;
+    public status: string; // could be wrong type
     public time: Time | null;
     public fastestLap: FastestLap | null;
 

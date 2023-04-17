@@ -1,9 +1,9 @@
 export default class LocationFinder {
 
-    public lat: any
-    public long: any
-    public locality: any
-    public country: any
+    public lat: number
+    public long: number
+    public locality: string
+    public country: string
 
     constructor(locationParser: any) {
         this.lat = parseFloat(locationParser.lat);

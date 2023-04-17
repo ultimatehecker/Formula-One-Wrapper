@@ -7,9 +7,9 @@ export default class DriverQualifyingResult {
     public position: number;
     public driver: Driver;
     public constructorName: Constructor;
-    public q1: any;
-    public q2: any;
-    public q3: any;
+    public q1: number;
+    public q2: number;
+    public q3: number;
 
     constructor(qualifyingResultParser: any) {
         this.number = parseInt(qualifyingResultParser.number);

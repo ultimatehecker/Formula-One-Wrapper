@@ -2,7 +2,7 @@ export default class Driver {
 
     public driverId: string;
     public permanentNumber: number;
-    public code: any;
+    public code: string;
     public url: string;
     public givenName: string;
     public familyName: string;
