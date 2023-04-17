@@ -40,7 +40,7 @@ export default class F1Client {
     lapTimes: LapTimes
     pitStops: PitStops
 
-    getSeason(year: any, callback: any) {
+    getSeason(year: number, callback: any) {
         this.seasons.getSeason(year, this.responsesValidator, function(err: any, season: any) {
             callback(err, season);
         });
@@ -48,7 +48,7 @@ export default class F1Client {
         console.log("Successfully invoked methord getSeason");
     }
 
-    getRace(season: any, round: any, callback: any) {
+    getRace(season: number, round: number, callback: any) {
         this.races.getRace(season, round, this.responsesValidator, function(err: any, race: any) {
             callback(err, race);
         });
@@ -64,7 +64,7 @@ export default class F1Client {
         console.log("Successfully invoked methord getLastRace");
     }
 
-    getRaceResults(season: any, round: any, callback: any) {
+    getRaceResults(season: number, round: number, callback: any) {
         this.raceResults.getRaceResults(season, round, this.responsesValidator, function(err: any, raceResults: any) {
             callback(err, raceResults);
         });
@@ -72,7 +72,7 @@ export default class F1Client {
         console.log("Successfully invoked methord getRaceResults");
     }
 
-    getQualifyingResults(season: any, round: any, callback: any) {
+    getQualifyingResults(season: number, round: number, callback: any) {
         this.qualifyingResults.getQualifyingResults(season, round, this.responsesValidator, function(err: any, qualifyingResults: any) {
             callback(err, qualifyingResults);
         });
@@ -80,7 +80,7 @@ export default class F1Client {
         console.log("Successfully invoked methord getQualifyingResults");
     }
 
-    getDriverStandings(season: any, callback: any) {
+    getDriverStandings(season: number, callback: any) {
         this.standings.getDriverStandings(season, this.responsesValidator, function(err: any, driverStandings: any) {
             callback(err, driverStandings);
         });
@@ -88,7 +88,7 @@ export default class F1Client {
         console.log("Successfully invoked methord getDriverStandings");
     }
 
-    getDriverStandingAfterRound(season: any, round: any, callback: any) {
+    getDriverStandingAfterRound(season: number, round: number, callback: any) {
         this.standings.getDriverStandingAfterRound(season, round, this.responsesValidator, function(err: any, driverStandings: any) {
             callback(err, driverStandings);
         });
@@ -96,7 +96,7 @@ export default class F1Client {
         console.log("Successfully invoked methord getDriverStandingAfterRound");
     }
 
-    getConstructorStandings(season: any, callback: any) {
+    getConstructorStandings(season: number, callback: any) {
         this.standings.getConstructorStandings(season, this.responsesValidator, function(err: any, constructorStandings: any) {
             callback(err, constructorStandings);
         });
@@ -104,7 +104,7 @@ export default class F1Client {
         console.log("Successfully invoked methord getConstructorStandings");
     }
 
-    getConstructorStandingAfterRound(season: any, round: any, callback: any) {
+    getConstructorStandingAfterRound(season: number, round: number, callback: any) {
         this.standings.getConstructorStandingAfterRound(season, round, this.responsesValidator, function(err: any, constructorStandings: any) {
             callback(err, constructorStandings);
         });
@@ -112,7 +112,7 @@ export default class F1Client {
         console.log("Successfully invoked methord getConstructorStandingAfterRound");
     }
 
-    getDriver(driverId: any, callback: any) {
+    getDriver(driverId: string, callback: any) {
         this.drivers.getDriver(driverId, this.responsesValidator, function(err: any, driver: any) {
             callback(err, driver);
         });
@@ -120,7 +120,7 @@ export default class F1Client {
         console.log("Successfully invoked methord getDriver");
     }
 
-    getDrivers(year: any, callback: any) {
+    getDrivers(year: string, callback: any) {
         this.drivers.getDrivers(year, this.responsesValidator, function(err: any, drivers: any) {
             callback(err, drivers);
         });
@@ -128,7 +128,7 @@ export default class F1Client {
         console.log("Successfully invoked methord getDrivers");
     }
 
-    getConstructor(constructorId: any, callback: any) {
+    getConstructor(constructorId: string, callback: any) {
         this.constructors.getConstructor(constructorId, this.responsesValidator, function(err: any, constructor: any) {
             callback(err, constructor);
         });
@@ -136,7 +136,7 @@ export default class F1Client {
         console.log("Successfully invoked methord getConstructor");
     }
 
-    getConstructors(year: any, callback: any) {
+    getConstructors(year: string, callback: any) {
         this.constructors.getConstructors(year, this.responsesValidator, function(err: any, constructors: any) {
             callback(err, constructors);
         });
@@ -144,7 +144,7 @@ export default class F1Client {
         console.log("Successfully invoked methord getConstructors");
     }
 
-    getCircuit(circuitId: any, round: any, callback: any) {
+    getCircuit(circuitId: number, round: number, callback: any) {
         this.circuits.getCircuit(circuitId, round, this.responsesValidator, function(err: any, circuit: any) {
             callback(err, circuit);
         });
@@ -152,7 +152,7 @@ export default class F1Client {
         console.log("Successfully invoked methord getCircuit");
     }
 
-    getCircuits(year: any, callback: any) {
+    getCircuits(year: number, callback: any) {
         this.circuits.getCircuits(year, this.responsesValidator, function(err: any, circuits: any) {
             callback(err, circuits);
         });
@@ -160,7 +160,7 @@ export default class F1Client {
         console.log("Successfully invoked methord getCircuits");
     }
 
-    getFinishingStatuses(season: any, round: any, callback: any) {
+    getFinishingStatuses(season: number, round: number, callback: any) {
         this.finishingStatuses.getFinishingStatuses(season, round, this.responsesValidator, function(err: any, finishingStatuses: any) {
             callback(err, finishingStatuses);
         });
@@ -168,7 +168,7 @@ export default class F1Client {
         console.log("Successfully invoked methord getFinishingStatuses");
     }
 
-    getYearFinishingStatuses(season: any, callback: any) {
+    getYearFinishingStatuses(season: number, callback: any) {
         this.finishingStatuses.getYearFinishingStatuses(season, this.responsesValidator, function(err: any, finishingStatuses: any) {
             callback(err, finishingStatuses);
         });
@@ -176,7 +176,7 @@ export default class F1Client {
         console.log("Successfully invoked methord getYearFinishingStatuses");
     }
 
-    getLap(season: any, round: any, lapNumber: any, callback: any) {
+    getLap(season: number, round: number, lapNumber: number, callback: any) {
         this.lapTimes.getLap(season, round, lapNumber, this.responsesValidator, function(err: any, lap: any) {
             callback(err, lap);
         });
@@ -184,7 +184,7 @@ export default class F1Client {
         console.log("Successfully invoked methord getLap");
     }
 
-    getLaps(season: any, round: any, callback: any) {
+    getLaps(season: number, round: number, callback: any) {
         this.lapTimes.getLaps(season, round, this.responsesValidator, function(err: any, laps: any) {
             callback(err, laps);
         });
@@ -192,7 +192,7 @@ export default class F1Client {
         console.log("Successfully invoked methord getLaps");
     }
 
-    getPitStop(season: any, round: any, pitStopNumber: any, callback: any) {
+    getPitStop(season: number, round: number, pitStopNumber: number, callback: any) {
         this.pitStops.getPitStop(season, round, pitStopNumber, this.responsesValidator, function(err: any, pitStop: any) {
             callback(err, pitStop);
         });
@@ -200,7 +200,7 @@ export default class F1Client {
         console.log("Successfully invoked methord getPitStop");
     }
 
-    getDriverPitStops(season: any, round: any, driverId: any, pitStopNumber: any,  callback: any) {
+    getDriverPitStops(season: number, round: number, driverId: string, pitStopNumber: number,  callback: any) {
         this.pitStops.getDriverPitStops(season, round, driverId, pitStopNumber, this.responsesValidator, function(err: any, pitStops: any) {
             callback(err, pitStops);
         });

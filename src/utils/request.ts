@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-function getRequest(url: any, offset: any, limit: any, callback: any) {
+function getRequest(url: string, offset: number, limit: number, callback: any) {
     axios.get(url + "?offset=" + offset + "&limit=" + limit).then(function(response: any) {
         if (response instanceof Error) {
             callback(response, null);
