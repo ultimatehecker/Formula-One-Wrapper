@@ -4,6 +4,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Navbar from '../components/Navbar';
 import ActiveLink from '../components/ActiveLink';
+import Link from 'next/link';
 
 const Home: NextPage = () => {
   return (
@@ -22,8 +23,8 @@ const Home: NextPage = () => {
 
         <ActiveLink>
           <ul>
-            <li><a href="/reference">Reference</a></li>
-            <li><a href="/guide">Guide</a></li>
+            <li><Link href="/reference">Reference</Link></li>
+            <li><Link href="/guide">Guide</Link></li>
           </ul>
         </ActiveLink>
       </Navbar>

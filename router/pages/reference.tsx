@@ -2,6 +2,7 @@ import ActiveLink from "@/components/ActiveLink";
 import Navbar from "@/components/Navbar";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
+import Link from "next/link";
 
 function Reference() {
     return (
@@ -20,8 +21,8 @@ function Reference() {
     
             <ActiveLink>
                 <ul>
-                <li><a href="/reference">Reference</a></li>
-                <li><a href="/guide">Guide</a></li>
+                <li><Link href="/reference">Reference</Link></li>
+                <li><Link href="/guide">Guide</Link></li>
                 </ul>
             </ActiveLink>
             </Navbar>
