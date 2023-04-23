@@ -1,6 +1,6 @@
 import getRequest from "../utils/request";
-import Driver from "../config/drivers/driver";
-import DriversList from "../config/drivers/driversList";
+import Driver from "../../typings/drivers/driver";
+import DriversList from "../../typings/drivers/driversList";
 import config from "../utils/config";
 import ResponsesValidator from "./responsesValidator";
 

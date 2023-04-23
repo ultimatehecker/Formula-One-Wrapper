@@ -1,6 +1,6 @@
 import getRequest from "../utils/request";
-import PitStop from "../config/pitStops/pitStop";
-import PitStopList from "../config/pitStops/pitStopList";
+import PitStop from "../../typings/pitStops/pitStop";
+import PitStopList from "../../typings/pitStops/pitStopList";
 import config from "../utils/config";
 import ResponsesValidator from "./responsesValidator";
 

@@ -1,6 +1,6 @@
 import getRequest from "../utils/request";
-import DriversStandings from "../config/standings/driversStandings";
-import ConstructorsStandings from "../config/standings/constructionStandings";
+import DriversStandings from "../../typings/standings/driversStandings";
+import ConstructorsStandings from "../../typings/standings/constructionStandings";
 import config from "../utils/config";
 import ResponsesValidator from "./responsesValidator";
 

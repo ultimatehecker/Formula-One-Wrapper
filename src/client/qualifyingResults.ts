@@ -1,5 +1,5 @@
 import getRequest from "../utils/request";
-import QualifyingResult from "../config/qualifyingResults/qualifyingResults";
+import QualifyingResult from "../../typings/qualifyingResults/qualifyingResults";
 import config from "../utils/config";
 import ResponsesValidator from "./responsesValidator";
 

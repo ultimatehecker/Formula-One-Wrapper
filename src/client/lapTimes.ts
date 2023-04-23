@@ -1,7 +1,7 @@
 import async from 'async';
 import getRequest from "../utils/request";
-import Lap from '../config/lapTimes/lap';
-import LapList from '../config/lapTimes/lapList';
+import Lap from '../../typings/lapTimes/lap';
+import LapList from '../../typings/lapTimes/lapList';
 import config from '../utils/config';
 import ResponsesValidator from './responsesValidator';
 

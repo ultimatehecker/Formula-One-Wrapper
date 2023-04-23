@@ -1,5 +1,5 @@
 import getRequest from "../utils/request";
-import FinishingStatusList from "../config/finishingStatuses/finishingStatusList";
+import FinishingStatusList from "../../typings/finishingStatuses/finishingStatusList";
 import config from "../utils/config";
 import ResponsesValidator from "./responsesValidator";
 

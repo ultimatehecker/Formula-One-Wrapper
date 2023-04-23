@@ -1,5 +1,5 @@
 import getRequest from "../utils/request";
-import Season from "../config/seasons/season";
+import Season from "../../typings/seasons/season";
 import config from "../utils/config";
 import ResponsesValidator from "./responsesValidator";
 

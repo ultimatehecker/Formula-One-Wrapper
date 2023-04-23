@@ -1,4 +1,4 @@
-import ErgastClient from '../api';
+import ErgastClient from '../src/api';
 
 let ergastClient = new ErgastClient();
 

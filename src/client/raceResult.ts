@@ -1,5 +1,5 @@
 import getRequest from "../utils/request";
-import RaceResult from "../config/raceResults/raceResults";
+import RaceResult from "../../typings/raceResults/raceResults";
 import config from "../utils/config";
 import ResponsesValidator from "./responsesValidator";
 

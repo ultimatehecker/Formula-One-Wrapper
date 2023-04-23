@@ -1,6 +1,6 @@
 import getRequest from '../utils/request';
-import Circuit from '../config/circuits/circuit';
-import CircuitsList from '../config/circuits/circuitsList';
+import Circuit from '../../typings/circuits/circuit';
+import CircuitsList from '../../typings/circuits/circuitsList';
 import ResponsesValidator from './responsesValidator';
 import config from '../utils/config';
 

@@ -1,6 +1,6 @@
 import getRequest from "../utils/request";
-import Constructor from "../config/constructors/constructor";
-import ConstructorsList from "../config/constructors/constructorsList";
+import Constructor from "../../typings/constructors/constructor";
+import ConstructorsList from "../../typings/constructors/constructorsList";
 import config from "../utils/config";
 import ResponsesValidator from "./responsesValidator";
 
