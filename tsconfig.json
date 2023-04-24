@@ -21,6 +21,6 @@
         "@/*": ["./*"]
       }
   },
-  "include": ["./src/**/**/*", "test/f1.test.ts", "typings/circuits", "typings/constructors", "typings/drivers", "typings/finishingStatuses", "typings/lapTimes", "typings/pitStops", "typings/seasons", "typings/qualifyingResults"],
-  "exclude": ["./src/spec"]
+  "include": ["./src/**/*", "typings/**/*"],
+  "exclude": ["./test", "./node_modules", "./router"]
 }

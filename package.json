@@ -11,13 +11,10 @@
     "ergast"
   ],
   "scripts": {
-    "build:client": "rimraf ./lib && tsc",
-    "build:website": "turbo run build",
-    "start:client": "npm run test && npm run build && node lib/api.js && npm run start:website",
-    "start:website": "turbo run dev",
-    "lint": "turbo run lint",
-    "test": "jest",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "build": "rimraf ./lib && tsc",
+    "start": "npm run test && npm run build && node lib/api.js && npm run start:website",
+    "start:website": "cd ./router && npm run build && npm run start",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -42,7 +39,6 @@
     "rimraf": "^5.0.0",
     "ts-jest": "^29.1.0",
     "ts-node": "^10.9.1",
-    "turbo": "^1.9.3",
     "typescript": "^5.0.4"
   },
   "dependencies": {
