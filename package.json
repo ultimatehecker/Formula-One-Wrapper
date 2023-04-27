@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/ultimatehecker/Formula-One-Wrapper#readme",
   "devDependencies": {
-    "@types/async": "^3.2.19",
+    "@types/async": "^3.2.20",
     "@types/axios": "^0.14.0",
     "@types/jest": "^29.5.1",
     "@types/node": "^18.16.1",
