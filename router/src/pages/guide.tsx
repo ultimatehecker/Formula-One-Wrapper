@@ -1,12 +1,11 @@
 import ActiveLink from "@/components/ActiveLink";
 import Navbar from "@/components/Navbar";
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
 import Link from "next/link";
 
 function Guide() {
     return (
-        <div className={styles.container}>
+        <div>
             <Head>
                 <title>Formula 1 - Simplified</title>
                 <meta name="description" content="Website for Formula Simplified" />
