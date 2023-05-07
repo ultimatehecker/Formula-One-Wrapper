@@ -16,8 +16,6 @@ describe("Testing the call: getSeason", function() {
     }, 10000);
 });
 
-/*
-
 describe("Testing the call: getSeason", function() {
     it("Should return an error because Formula 1 didn't exist in 1900", (done: any) => {
         ergastClient.getSeason(1900, (err: any, season: any) => {
@@ -49,5 +47,3 @@ describe("Testing the call: getRace", function() {
         });
     }, 10000);
 });
-
-*/
