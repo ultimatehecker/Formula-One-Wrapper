@@ -22,8 +22,8 @@ export default class Circuits {
                 callback(new Error('Invalid season/round.'));
             }
             else {
-                callback(null, new Circuit(response.data.MRData.CircuitTable.Circuits[0]));
-                console.log(response.data.MRData.CircuitTable.Circuits[0]);
+                callback(null, new Circuit(response.data.MRData.CircuitTable.Circuits[round]));
+                console.log(response.data.MRData.CircuitTable.Circuits[round]);
             }
         });
     };
