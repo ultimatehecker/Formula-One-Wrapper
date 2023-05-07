@@ -13,7 +13,7 @@ export default class LapTimes {
     
     responsesValidator: ResponsesValidator;
     
-    getLap(season: number, round: number, lap: number, responsesValidator: any, callback: any) {
+    getLap(season: any, round: any, lap: any, responsesValidator: any, callback: any) {
         let url = config.baseUrl + season + "/" + round + "/laps/" + lap + ".json";
         getRequest(url, 0, config.defaultResponseRows, function(err: any, response: any) {
             if (err) {
@@ -24,11 +24,12 @@ export default class LapTimes {
             }
             else {
                 callback(null, new LapList(response.data.MRData.LapTable.Laps));
+                console.log(response.data.MRData.LapTable.Laps);
             }
         });
     }
 
-    getDriverLap(season: number, round: number, driverId: string, lap: number, responsesValidator: any, callback: any) {
+    getDriverLap(season: any, round: any, driverId: any, lap: any, responsesValidator: any, callback: any) {
         let url = config.baseUrl + season + "/" + round + "/drivers/" + driverId + "/laps/" + lap + ".json";
         getRequest(url, 0, config.defaultResponseRows, function(err: any, response: any) {
             if (err) {
@@ -39,11 +40,12 @@ export default class LapTimes {
             }
             else {
                 callback(null, new LapList(response.data.MRData.LapTable.Laps));
+                console.log(response.data.MRData.LapTable.Laps);
             }
         });
     }
 
-    getLaps(season: number, round: number, responsesValidator: any, callback: any) {
+    getLaps(season: any, round: any, responsesValidator: any, callback: any) {
         let laps: any = [];
         let rows = 0
         let totalRows = 0;
@@ -80,7 +82,6 @@ export default class LapTimes {
 
     }
 
-
     fixSplitLaps(splitLaps: any) {
         var arrayWithRepeatedElems: any = [];
 
@@ -94,7 +95,7 @@ export default class LapTimes {
         var index = 0;
         while (index < arrayWithRepeatedElems.length) { // last element or not repeated
             if (index === arrayWithRepeatedElems.length - 1
-                    || arrayWithRepeatedElems[index].number !== arrayWithRepeatedElems[index+1].number) {
+                    || arrayWithRepeatedElems[index].any !== arrayWithRepeatedElems[index+1].any) {
                 arrayWithoutRepeatedElems.push(arrayWithRepeatedElems[index]);
                 ++index;
             }

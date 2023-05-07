@@ -12,7 +12,7 @@ export default class Standings {
     
     responsesValidator: ResponsesValidator;
     
-    getDriverStandings(season: number, responsesValidator: any, callback: any) {
+    getDriverStandings(season: any, responsesValidator: any, callback: any) {
         let url = config.baseUrl + season + "/driverStandings.json";
         getRequest(url, 0, config.defaultResponseRows, function(err: any, response: any) {
             if (err) {
@@ -23,11 +23,12 @@ export default class Standings {
             }
             else {
                 callback(null, new DriversStandings(response.data.MRData.StandingsTable.StandingsLists[0].DriversStandings));
+                console.log(response.data.MRData.StandingsTable.StandingsLists[0].DriversStandings);
             }
         });
     }
 
-    getDriverStandingAfterRound(season: number, round: number, responsesValidator: any, callback: any) {
+    getDriverStandingAfterRound(season: any, round: any, responsesValidator: any, callback: any) {
         let url = config.baseUrl + season + "/" + round + "/driverStandings.json";
         getRequest(url, 0, config.defaultResponseRows, function(err: any, response: any) {
             if (err) {
@@ -38,11 +39,12 @@ export default class Standings {
             }
             else {
                 callback(null, new DriversStandings(response.data.MRData.StandingsTable.StandingsLists[0].DriversStandings));
+                console.log(response.data.MRData.StandingsTable.StandingsLists[0].DriversStandings);
             }
         });
     }
 
-    getConstructorStandings(season: number, responsesValidator: any, callback: any) {
+    getConstructorStandings(season: any, responsesValidator: any, callback: any) {
         let url = config.baseUrl + season + "/constructorStandings.json";
         getRequest(url, 0, config.defaultResponseRows, function(err: any, response: any) {
             if (err) {
@@ -53,11 +55,12 @@ export default class Standings {
             }
             else {
                 callback(null, new ConstructorsStandings(response.data.MRData.StandingsTable.StandingsLists[0].ConstructorsStandings));
+                console.log(response.data.MRData.StandingsTable.StandingsLists[0].ConstructorsStandings);
             }
         });
     }
 
-    getConstructorStandingAfterRound(season: number, round: number, responsesValidator: any, callback: any) {
+    getConstructorStandingAfterRound(season: any, round: any, responsesValidator: any, callback: any) {
         let url = config.baseUrl + season + "/" + round + "/constructorStandings.json";
         getRequest(url, 0, config.defaultResponseRows, function(err: any, response: any) {
             if (err) {
@@ -68,6 +71,7 @@ export default class Standings {
             }
             else {
                 callback(null, new ConstructorsStandings(response.data.MRData.StandingsTable.StandingsLists[0].ConstructorsStandings));
+                console.log(response.data.MRData.StandingsTable.StandingsLists[0].ConstructorsStandings);
             }
         });
     }

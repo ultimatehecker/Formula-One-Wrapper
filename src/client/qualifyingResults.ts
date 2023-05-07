@@ -11,7 +11,7 @@ export default class QualifyingResults {
     
     responsesValidator: ResponsesValidator;
     
-    getQualifyingResults(season: number, round: number, responsesValidator: any, callback: any) {
+    getQualifyingResults(season: any, round: any, responsesValidator: any, callback: any) {
         let url = config.baseUrl + season + "/" + round + "/qualifying.json";
         getRequest(url, 0, config.defaultResponseRows, function(err: any, response: any) {
             if (err) {
@@ -22,6 +22,7 @@ export default class QualifyingResults {
             }
             else {
                 callback(null, new QualifyingResult(response.data.MRData.RaceTable.Races[0].QualifyingResults));
+                console.log(response.data.MRData.RaceTable.Races[0].QualifyingResults);
             }
         });
     }

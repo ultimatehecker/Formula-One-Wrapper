@@ -11,7 +11,7 @@ export default class RaceResults {
     
     responsesValidator: ResponsesValidator;
     
-    getRaceResults(season: number, round: number, responsesValidator: any, callback: any) {
+    getRaceResults(season: any, round: any, responsesValidator: any, callback: any) {
         let url = config.baseUrl + season + "/" + round + "/results.json";
         getRequest(url, 0, config.defaultResponseRows, function(err: any, response: any) {
             if (err) {
@@ -22,6 +22,7 @@ export default class RaceResults {
             }
             else {
                 callback(null, new RaceResult(response.data.MRData.RaceTable.Races[0].Results));
+                console.log(response.data.MRData.RaceTable.Races[0].Results);
             }
         });
     }

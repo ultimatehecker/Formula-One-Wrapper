@@ -11,7 +11,7 @@ export default class FinishingStatuses {
     
     responsesValidator: ResponsesValidator;
     
-    getFinishingStatuses(season: number, round: number, responsesValidator: any, callback: any) {
+    getFinishingStatuses(season: any, round: any, responsesValidator: any, callback: any) {
         let url = config.baseUrl + season + "/" + round + "/status.json";
         getRequest(url, 0, config.defaultResponseRows, function(err: any, response: any) {
             if (err) {
@@ -22,11 +22,12 @@ export default class FinishingStatuses {
             }
             else {
                 callback(null, new FinishingStatusList(response.data.MRData.StatusTable.Status));
+                console.log(response.data.MRData.StatusTable.Status);
             }
         });
     }
 
-    getYearFinishingStatuses(season: number, responsesValidator: any, callback: any) {
+    getYearFinishingStatuses(season: any, responsesValidator: any, callback: any) {
         let url = config.baseUrl + season + "/status.json"
         getRequest(url, 0, config.defaultResponseRows, function(err: any, response: any) {
             if (err) {
@@ -37,6 +38,7 @@ export default class FinishingStatuses {
             }
             else {
                 callback(null, new FinishingStatusList(response.data.MRData.StatusTable.Status));
+                console.log(response.data.MRData.StatusTable.Status);
             }
         });
     }

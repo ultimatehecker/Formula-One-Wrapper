@@ -12,7 +12,7 @@ export default class Constructors {
     
     responsesValidator: ResponsesValidator;
     
-    getConstructor = function( constructorId: string, responsesValidator: any, callback: any) {
+    getConstructor = function( constructorId: any, responsesValidator: any, callback: any) {
         let url = config.baseUrl + "constructors/" + constructorId + ".json";
         getRequest(url, 0, config.defaultResponseRows, function(err: any, response: any) {
             if (err) {
@@ -23,11 +23,12 @@ export default class Constructors {
             }
             else {
                 callback(null, new ConstructorsList(response.data.MRData.ConstructorTable.Constructors[0]));
+                console.log(response.data.MRData.ConstructorTable.Constructors[0]);
             }
         });
     }
 
-    getConstructors = function(year: string, responsesValidator: any, callback: any) {
+    getConstructors = function(year: any, responsesValidator: any, callback: any) {
         var url = config.baseUrl + year + "/constructors.json"
         getRequest(url, 0, config.defaultResponseRows, function(err: any, response: any) {
             if (err) {
@@ -38,6 +39,7 @@ export default class Constructors {
             }
             else {
                 callback(null, new Constructor(response.data.MRData.ConstructorTable.Constructors[0]));
+                console.log(response.data.MRData.ConstructorTable.Constructors[0]);
             }
         });
     }

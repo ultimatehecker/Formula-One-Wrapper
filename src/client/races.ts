@@ -11,7 +11,7 @@ export default class Races {
     
     responsesValidator: ResponsesValidator;
     
-    getRace(season: number, round: number, responsesValidator: any, callback: any) {
+    getRace(season: any, round: any, responsesValidator: any, callback: any) {
         let url = config.baseUrl + season + "/" + round + ".json";
         getRequest(url, 0, config.defaultResponseRows, function(err: any, response: any) {
             if (err) {
@@ -21,8 +21,8 @@ export default class Races {
                 callback(new Error('Invalid season/round.'));
             }
             else {
-                console.log(response.data.MRData.RaceTable.Races);
                 callback(null, new Race(response.data.MRData.RaceTable.Races[0]));
+                console.log(response.data.MRData.RaceTable.Races[0]);
             }
         });
     }
@@ -34,8 +34,8 @@ export default class Races {
                 callback(err);
             }
             else {
-                // callback(null, new Race(response["MRData"]["RaceTable"]["Races"][0]));
                 callback(null, new Race(response.data.MRData.RaceTable.Races[0]))
+                console.log(response.data.MRData.RaceTable.Races[0]);
             }
         });
     }

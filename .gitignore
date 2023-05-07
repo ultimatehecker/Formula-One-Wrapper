@@ -44,9 +44,6 @@ jspm_packages/
 /.pnp
 lib/
 
-# TypeScript v1 declaration files
-typings/
-
 # TypeScript cache
 *.tsbuildinfo
 

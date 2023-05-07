@@ -12,7 +12,7 @@ export default class PitStops {
     
     responsesValidator: ResponsesValidator;
     
-    getPitStop(season: number, round: number, pitStop: number, responsesValidator: any, callback: any) {
+    getPitStop(season: any, round: any, pitStop: any, responsesValidator: any, callback: any) {
         let url = config.baseUrl + season + "/" + round + "/pitstops/" + pitStop + ".json";
         getRequest(url, 0, config.defaultResponseRows, function(err: any, response: any) {
             if (err) {
@@ -23,11 +23,12 @@ export default class PitStops {
             }
             else {
                 callback(null, new PitStopList(response.data.MRData.RaceTable.Races[0].PitStops));
+                console.log(response.data.MRData.RaceTable.Races[0].PitStops);
             }
         });
     }
 
-    getDriverPitStops(season: number, round: number, driverId: string, pitStop: number, responsesValidator: any, callback: any)  {
+    getDriverPitStops(season: any, round: any, driverId: any, pitStop: any, responsesValidator: any, callback: any)  {
         let url = config.baseUrl + season + "/" + round + "/drivers/"+ driverId + "/pitstops/" + pitStop + ".json";
         getRequest(url, 0, config.defaultResponseRows, function(err: any, response: any) {
             if (err) {
@@ -38,6 +39,7 @@ export default class PitStops {
             }
             else {
                 callback(null, new PitStop(response.data.MRData.RaceTable.Races[0].PitStops[0]));
+                console.log(response.data.MRData.RaceTable.Races[0].PitStops[0]);
             }
         });
     }
