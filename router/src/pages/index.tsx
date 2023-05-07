@@ -1,5 +1,6 @@
 import { StyleColorMode } from '../components/StyleColorMode'
 import { DarkLightSwitch } from '../components/DarkLightSwitch'
+import { Headline } from '@/components/Headline'
 
 import type { NextPage } from 'next'
 import Head from 'next/head'
@@ -14,6 +15,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/f1-logo.ico" />
       </Head>
 
+      <Headline title="Formula 1 Simplified" />
       <StyleColorMode height="100vh">
         <DarkLightSwitch />
       </StyleColorMode>
