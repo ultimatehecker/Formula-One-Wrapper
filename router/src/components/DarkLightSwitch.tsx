@@ -1,3 +1,7 @@
+/* eslint-disable react/jsx-no-undef */
+
+import Image from 'next/image'
+import carImage from '../../public/car.png'
 import { MoonIcon, SunIcon, HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
 import { useColorMode, IconButton, Flex, Button } from '@chakra-ui/react'
 import NextLink from 'next/link'
@@ -8,29 +12,33 @@ export const DarkLightSwitch = () => {
 	const [display, changeDisplay] = useState('none')
 	return (
 		<Flex>
+			<Flex position='fixed' top="0.2rem" left="0.1rem" align="center">
+				<NextLink href="/" passHref>
+					<Image src={carImage} alt="F1 Logo" width="201" height="67" />
+				</NextLink>
+			</Flex>
+
 			<Flex position="fixed" top="1rem" right="1rem" align="center">
-				{/* Desktop */}
 				<Flex display={['none', 'none', 'flex', 'flex']}>
 					<NextLink href="/reference" passHref>
-						<Button as="a" variant="ghost" aria-label="Reference" my={5} w="100%">
+						<Button as="span" variant="ghost" aria-label="Reference" my={5} w="100%">
 							Reference
 						</Button>
 					</NextLink>
 
 					<NextLink href="/guide" passHref>
-						<Button as="a" variant="ghost" aria-label="Guide" my={5} w="100%">
+						<Button as="span" variant="ghost" aria-label="Guide" my={5} w="100%">
 							Guide
 						</Button>
 					</NextLink>
 
-					<NextLink href="/" passHref>
-						<Button as="a" variant="ghost" aria-label="GitHub" my={5} w="100%">
+					<NextLink href="https://www.github.com/ultimatehecker/Formula-One-Wrapper" passHref>
+						<Button as="span" variant="ghost" aria-label="GitHub" my={5} w="100%">
 							GitHub
 						</Button>
 					</NextLink>
 				</Flex>
 
-				{/* Mobile */}
 				<IconButton
 					icon={colorMode === 'light' ? <SunIcon /> : <MoonIcon />}
 					size="md"
@@ -49,6 +57,9 @@ export const DarkLightSwitch = () => {
 					display={['flex', 'flex', 'none', 'none']}
 				/>
 			</Flex>
+
+
+	
 
 			{/* Mobile Content */}
 			<Flex
@@ -74,6 +85,8 @@ export const DarkLightSwitch = () => {
 					/>
 				</Flex>
 
+				{/*
+
 				<Flex flexDir="column" align="center">
 					<NextLink href="/reference" passHref>
 						<Button as="a" variant="ghost" aria-label="Reference" my={5} w="100%">
@@ -94,6 +107,8 @@ export const DarkLightSwitch = () => {
 					</NextLink>
 					
 				</Flex>
+
+					*/}
 			</Flex>
 		</Flex>
 	)
