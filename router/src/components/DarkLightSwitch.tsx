@@ -11,8 +11,8 @@ export const DarkLightSwitch = () => {
 	const { colorMode, toggleColorMode } = useColorMode()
 	const [display, changeDisplay] = useState('none')
 	return (
-		<Flex>
-			<Flex position='fixed' top="0.2rem" left="0.1rem" align="center">
+		<Flex flexDirection="row">
+			<Flex position='fixed' top="0rem" left="0.1rem" align="center">
 				<NextLink href="/" passHref>
 					<Image src={carImage} alt="F1 Logo" width="201" height="67" />
 				</NextLink>
@@ -85,8 +85,6 @@ export const DarkLightSwitch = () => {
 					/>
 				</Flex>
 
-				{/*
-
 				<Flex flexDir="column" align="center">
 					<NextLink href="/reference" passHref>
 						<Button as="a" variant="ghost" aria-label="Reference" my={5} w="100%">
@@ -107,8 +105,6 @@ export const DarkLightSwitch = () => {
 					</NextLink>
 					
 				</Flex>
-
-					*/}
 			</Flex>
 		</Flex>
 	)
