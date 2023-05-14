@@ -3,13 +3,13 @@ import Constructor from "../constructors/constructor";
 
 export default class DriverQualifyingResult {
 
-    public number: any;
-    public position: any;
+    public number: number;
+    public position: number; // TODO: figure out why this is a number
     public driver: Driver;
     public constructorName: Constructor;
-    public q1: any;
-    public q2: any;
-    public q3: any;
+    public q1: string;
+    public q2: string;
+    public q3: string;
 
     constructor(qualifyingResultParser: any) {
         this.number = parseInt(qualifyingResultParser.any);

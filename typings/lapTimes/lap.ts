@@ -1,8 +1,8 @@
 export default class Lap {
 
-    public driverId: any;
-    public pos: any;
-    public time: any;
+    public driverId: string;
+    public pos: number; // TODO: figure out why this is a number
+    public time: string;
 
     constructor(lapParser: any) {
         this.driverId = lapParser.driverId

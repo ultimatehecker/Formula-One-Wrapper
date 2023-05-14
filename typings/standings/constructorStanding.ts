@@ -2,13 +2,13 @@ import Constructor from "../constructors/constructor";
 
 export default class ConstructorStanding {
 
-    public pos: any;
-    public points: any;
-    public wins: any;
+    public position: number; // TODO: figure out why this is a number
+    public points: number; // TODO: figure out why this is a number
+    public wins: number; // TODO: figure out why this is a number
     public constructorName: Constructor;
 
     constructor(constructorStandingParser: any) {
-        this.pos = parseInt(constructorStandingParser.pos);
+        this.position = parseInt(constructorStandingParser.pos);
         this.points = parseInt(constructorStandingParser.points);
         this.wins = parseInt(constructorStandingParser.wins);
         this.constructorName = new Constructor(constructorStandingParser.constructorName);

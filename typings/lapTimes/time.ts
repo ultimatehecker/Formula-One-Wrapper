@@ -1,7 +1,7 @@
 export default class Time {
 
-    public millis: any;
-    public time: any;
+    public millis: number; // TODO: figure out why this is a number
+    public time: string;
 
     constructor(timeParser: any) {
         this.millis = parseInt(timeParser.millis)

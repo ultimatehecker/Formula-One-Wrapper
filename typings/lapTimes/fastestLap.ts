@@ -3,8 +3,8 @@ import Time from "./time";
 
 export default class FastestLap {
 
-    public rank: any;
-    public lap: any;
+    public rank: number; // TODO: figure out why this is a number
+    public lap: number; // TODO: figure out why this is a number
     public time: Time;
     public averageSpeed: AverageSpeed;
 

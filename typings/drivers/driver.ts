@@ -1,17 +1,17 @@
 export default class Driver {
 
-    public driverId: any;
-    public permanentany: any;
-    public code: any;
-    public url: any;
-    public givenName: any;
-    public familyName: any;
-    public dateOfBirth: any;
-    public nationality: any;
+    public driverId: string;
+    public permanentNumber: number; // TODO: figure out why this is a number
+    public code: string;
+    public url: string;
+    public givenName: string;
+    public familyName: string;
+    public dateOfBirth: string;
+    public nationality: string;
 
     constructor(driverParser: any) {
         this.driverId = driverParser.driverId;
-        this.permanentany = parseInt(driverParser.permanentany);
+        this.permanentNumber = parseInt(driverParser.permanentany);
         this.code = driverParser.code;
         this.url = driverParser.url;
         this.givenName = driverParser.givenName;

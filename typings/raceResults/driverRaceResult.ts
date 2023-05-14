@@ -5,14 +5,14 @@ import FastestLap from "../lapTimes/fastestLap";
 
 export default class DriverRaceResult {
 
-    public number: any;
-    public pos: any;
-    public points: any;
+    public number: number; // TODO: figure out why this is a number
+    public pos: number; // TODO: figure out why this is a number
+    public points: number; // TODO: figure out why this is a number
     public driver: Driver;
     public constructorName: Constructor;
-    public grid: any;
-    public laps: any;
-    public status: any; // could be wrong type
+    public grid: number; // TODO: figure out why this is a number
+    public laps: number; // TODO: figure out why this is a number
+    public status: string;
     public time: Time | null;
     public fastestLap: FastestLap | null;
 

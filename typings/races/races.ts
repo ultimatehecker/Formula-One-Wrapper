@@ -2,14 +2,13 @@ import Circuit from "../circuits/circuit";
 
 export default class Race {
 
-    public season: any;
-    public round: any;
-    public url: any;
-    public raceName: any;
+    public season: number; // TODO: figure out why this is a number
+    public round: number; // TODO: figure out why this is a number
+    public url: string;
+    public raceName: string;
     public circuit: Circuit;
-    public date: any;
-    public time: any;
-
+    public date: string;
+    public time: string;
 
     constructor(raceParser: any) {
         this.season = parseInt(raceParser.season);

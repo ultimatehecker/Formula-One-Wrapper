@@ -1,15 +1,15 @@
-import LocationFinder from './locationFinder';
+import Location from './location';
 
 export default class Circuit {
-  public circuitId: any;
-  public url: any;
-  public circuitName: any;
-  public location: LocationFinder;
+  public circuitId: string;
+  public url: string;
+  public circuitName: string;
+  public location: Location;
 
   public constructor(circuitParser: any) {
     this.circuitId = circuitParser.circuitId;
     this.url = circuitParser.url;
     this.circuitName = circuitParser.circuitName;
-    this.location = new LocationFinder(circuitParser.LocationFinder);
+    this.location = new Location(circuitParser.Location);
   }
 }

@@ -1,7 +1,7 @@
 export default class ResponsesValidator {
 
     responseWithoutRaces(callResponse: any) {
-        //console.log(callResponse);
+        console.log(callResponse);
         return callResponse.data.MRData.RaceTable.Races.length === 0;
     }
 

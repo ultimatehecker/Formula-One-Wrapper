@@ -1,11 +1,11 @@
 export default class FinishingStatus {
 
-    public statusId: any;
-    public count: any;
-    public status: any;
+    public statusId: number; // TODO: figure out why this is a number
+    public count: number; // TODO: figure out why this is a number
+    public status: string;
 
     constructor(finishingStatusParser: any) {
-        this.statusId = finishingStatusParser.statusId
+        this.statusId = parseInt(finishingStatusParser.statusId);
         this.count = parseInt(finishingStatusParser.count);
         this.status = finishingStatusParser.status
     }

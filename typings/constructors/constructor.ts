@@ -1,9 +1,9 @@
 export default class Constructor {
 
-    public constructorId: any;
-    public url: any;
-    public name: any;
-    public nationality: any;
+    public constructorId: string;
+    public url: string;
+    public name: string;
+    public nationality: string;
 
     constructor(constructorParser: any) {
         this.constructorId = constructorParser.constructorId;

@@ -1,7 +1,7 @@
 export default class AverageSpeed {
 
-    public units: any;
-    public speed: any;
+    public units: string;
+    public speed: number; // TODO: figure out why this is a number
 
     constructor(averageSpeedParser: any) {
         this.units = averageSpeedParser.units;

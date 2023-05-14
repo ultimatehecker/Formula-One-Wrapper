@@ -3,14 +3,14 @@ import Constructor from "../constructors/constructor";
 
 export default class DriverStanding {
 
-    public pos: any;
-    public points: any;
-    public wins: any;
+    public position: number; // TODO: figure out why this is a number
+    public points: number; // TODO: figure out why this is a number
+    public wins: number; // TODO: figure out why this is a number
     public driver: Driver;
     public constructorName: Constructor;
 
     constructor(driverStandingParser: any) {
-        this.pos = parseInt(driverStandingParser.pos);
+        this.position = parseInt(driverStandingParser.pos);
         this.points = parseInt(driverStandingParser.points);
         this.wins = parseInt(driverStandingParser.wins);
         this.driver = new Driver(driverStandingParser.driver);
