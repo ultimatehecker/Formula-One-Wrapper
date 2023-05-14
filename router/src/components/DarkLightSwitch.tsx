@@ -87,19 +87,19 @@ export const DarkLightSwitch = () => {
 
 				<Flex flexDir="column" align="center">
 					<NextLink href="/reference" passHref>
-						<Button as="a" variant="ghost" aria-label="Reference" my={5} w="100%">
+						<Button as="span" variant="ghost" aria-label="Reference" my={5} w="100%">
 							Reference
 						</Button>
 					</NextLink>
 
 					<NextLink href="/guide" passHref>
-						<Button as="a" variant="ghost" aria-label="Guide" my={5} w="100%">
+						<Button as="span" variant="ghost" aria-label="Guide" my={5} w="100%">
 							Guide
 						</Button>
 					</NextLink>
 
 					<NextLink href="/" passHref>
-						<Button as="a" variant="ghost" aria-label="GitHub" my={5} w="100%">
+						<Button as="span" variant="ghost" aria-label="GitHub" my={5} w="100%">
 							GitHub
 						</Button>
 					</NextLink>
