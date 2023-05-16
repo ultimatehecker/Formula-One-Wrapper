@@ -1,5 +1,5 @@
 import { StyleColorMode } from '../components/StyleColorMode'
-import { DarkLightSwitch } from '../components/DarkLightSwitch'
+import Navbar from '../components/NavBar'
 
 import type { NextPage } from 'next'
 import Head from 'next/head'
@@ -15,7 +15,7 @@ const Home: NextPage = () => {
       </Head>
 
       <StyleColorMode height="100vh">
-        <DarkLightSwitch />
+        <Navbar />
       </StyleColorMode>
     </div>
   )
