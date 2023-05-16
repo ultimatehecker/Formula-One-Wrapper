@@ -2,6 +2,7 @@ import { StyleColorMode } from '../components/StyleColorMode'
 import { MainColorMode } from '../components/MainColorMode'
 import { DarkLightSwitch } from '../components/DarkLightSwitch'
 import { Headline } from '@/components/Headline'
+import Navbar from '@/components/NavBar'
 
 import type { NextPage } from 'next'
 import Head from 'next/head'
@@ -21,7 +22,7 @@ const Home: NextPage = () => {
       </MainColorMode>
 
       <StyleColorMode height="100vh">
-        <DarkLightSwitch />
+      <Navbar />
       </StyleColorMode>
     </div>
   )
