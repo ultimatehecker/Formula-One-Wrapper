@@ -1,6 +1,6 @@
 import { StyleColorMode } from '../components/StyleColorMode'
 import { MainColorMode } from '../components/MainColorMode'
-import { DarkLightSwitch } from '../components/DarkLightSwitch'
+/* import { MidSection } from '../components/MidSection'*/
 import { Headline } from '@/components/Headline'
 import Navbar from '@/components/NavBar'
 
@@ -23,6 +23,7 @@ const Home: NextPage = () => {
 
       <StyleColorMode height="100vh">
       <Navbar />
+      {/* <MidSection title="Formula 1 Simplified" /> */}
       </StyleColorMode>
     </div>
   )

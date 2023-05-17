@@ -17,41 +17,46 @@ const Navbar: React.FC = () => {
         <Link href="/">
             <Flex  flexDirection="row" position='fixed' top="-1.65rem" left="-1rem" align="center">
                 <Flex>
-                    <Box m={0.5} bg="#ed4245" w="90%">
+                    <Box m={0.5} bg="#ed4245" w="90%" h={20}>
                         <Image src={carImage} alt="F1 Logo" width="201" height="60" />
                     </Box>
                 </Flex>
 
-                <Heading fontSize={16}>
+                <Heading fontSize={16} marginTop={5}>
                     Formula One Wrapper
                 </Heading>
             </Flex>
         </Link>
 
-        <Flex display={{ base: "none", md: "block" }} pos="static" w="auto" bg="transparent" flexDir="row">
+        <Flex display={{ base: "none", md: "flex" }} pos="static" w="auto" bg="transparent" flexDir="row">
             <Link href="/reference">
-                <Button as="span" border={0} p="0 8px" bg="transparent" color="rgba(255, 255, 255, 0.5)" cursor="pointer" _active={{ color: "inherit" }}>
+                <Button as="span" border={0} p="0 8px" bg="transparent" color="rgba(255, 255, 255, 0.5)" cursor="pointer" _active={{ color: "inherit" }} marginRight={1}>
                     Documentation
                 </Button>
             </Link>
 
             <Link href="/guide">
-                <Button as="span" border={0} p="0 8px" bg="transparent" color="rgba(255, 255, 255, 0.5)" cursor="pointer" _active={{ color: "inherit" }}>
+                <Button as="span" border={0} p="0 8px" bg="transparent" color="rgba(255, 255, 255, 0.5)" cursor="pointer" _active={{ color: "inherit" }} marginRight={1}>
                     Guide
                 </Button>
             </Link>
 
             <Link href="https://github.com/ultimatehecker/Formula-One-Wrapper" isExternal>
-                <Button as="span" border={0} p="0 8px" bg="transparent" color="rgba(255, 255, 255, 0.5)" cursor="pointer" _active={{ color: "inherit" }}>
+                <Button as="span" border={0} p="0 8px" bg="transparent" color="rgba(255, 255, 255, 0.5)" cursor="pointer" _active={{ color: "inherit" }} marginRight={1}>
                     GitHub
                 </Button>
             </Link>
 
-            <IconButton icon={colorMode === 'light' ? <SunIcon /> : <MoonIcon />} size="md" paddingBlock={2} ml={2} variant="ghost" aria-label="btn" onClick={toggleColorMode}/>
+            <IconButton icon={colorMode === 'light' ? <SunIcon /> : <MoonIcon />} size="md" marginRight={3} ml={2} marginTop={-0.5} variant="ghost" aria-label="btn" onClick={toggleColorMode}/>
             <IconButton aria-label="Open Menu" size="lg" ml={3} icon={<HamburgerIcon />} onClick={() => changeDisplay('flex')} display={['flex', 'flex', 'none', 'none']}/>
         </Flex>
 
         {/* Mobile Content */}
+
+        <Flex display={{ base: "flex", md: "none" }} pos="static" w="auto" bg="transparent" justifyContent="flex-end" flex={1} >
+            <IconButton icon={colorMode === 'light' ? <SunIcon /> : <MoonIcon />} size="lg" variant="ghost" marginRight={2} aria-label="btn" onClick={toggleColorMode}/>
+            <IconButton aria-label="Open Menu" size="lg" icon={<HamburgerIcon />} onClick={() => changeDisplay('flex')} display={['flex', 'flex', 'none', 'none']}/>
+        </Flex>
 
         <Flex w="100vw" display={display} zIndex={20} h="100vh" pos="fixed" top="0" left="0" bg='purple' overflowY="auto" flexDir="column"> 
             <Flex justify="flex-end">
