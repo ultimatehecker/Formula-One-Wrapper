@@ -51,13 +51,13 @@ export const MidSection = () => (
 
   <Flex position='relative' flexDirection="column" right={225} top={-500} marginTop='15' justifyContent="center" alignItems="center" height="35vh" bgClip="text">
     <Button left={40} bg="#c21f1f">
-      <Link href='/guide' color="white">
+      <Link href='/guide' color="white" textDecoration='none'>
         Get Started
       </Link>
     </Button>
 
     <Button left={275} bottom={10} bg="#c21f1f">
-      <Link href='/stats' color="white">
+      <Link href='/stats' color="white" textDecoration='none'>
         Discord
       </Link>
     </Button>
