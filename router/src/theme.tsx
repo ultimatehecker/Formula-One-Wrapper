@@ -7,11 +7,17 @@ const breakpoints = ({
     md: '52em',
     lg: '64em',
     xl: '80em',
-})
+});
+
+const themeColor = ({
+  bgLight: 'white', bgDark: 'black',
+  textLight: 'black', textDark: 'white'
+});
 
 const theme = extendTheme({
     colors: {
-        black: '#16161D',
+        black: themeColor.bgDark,
+        light: themeColor.bgLight,
     },
     fonts,
     breakpoints,

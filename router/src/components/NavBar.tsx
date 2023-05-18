@@ -17,7 +17,7 @@ const Navbar: React.FC = () => {
         <Link href="/">
             <Flex  flexDirection="row" position='fixed' top="-1.65rem" left="-1rem" align="center">
                 <Flex>
-                    <Box m={0.5} bg="#ed4245" w="90%" h={20}>
+                    <Box m={0.5} bg="#c21f1f" w="90%" h={20}>
                         <Image src={carImage} alt="F1 Logo" width="201" height="60" />
                     </Box>
                 </Flex>
