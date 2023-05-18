@@ -64,7 +64,3 @@ export const MidSection = () => (
   </Flex>
 </div>
 )
-
-MidSection.defaultProps = {
-  title: 'chakra-ui',
-}
