@@ -1,6 +1,5 @@
-import { Box, Center, Flex, Heading, Link } from '@chakra-ui/react'
+import { Box, Flex, Heading, Link } from '@chakra-ui/react'
 import { Bruno_Ace_SC } from 'next/font/google';
-import { Text } from '@chakra-ui/react';
  
 const roboto = Bruno_Ace_SC({
   weight: '400',
@@ -8,7 +7,7 @@ const roboto = Bruno_Ace_SC({
   display: 'swap',
 });
 
-export const Headline = ({ title }: { title: string }) => (
+const Headline = ({ title }: { title: string }) => (
 <div>
   <Flex position='relative' flexDirection="column" marginTop='15' justifyContent="center" alignItems="center" height="35vh" bgGradient="linear(to-l, #de6262, #ffb88c)" bgClip="text">
     <Heading fontSize="6vw">
@@ -33,3 +32,5 @@ export const Headline = ({ title }: { title: string }) => (
 Headline.defaultProps = {
   title: 'chakra-ui',
 }
+
+export default Headline

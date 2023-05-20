@@ -13,7 +13,7 @@ const roboto = Roboto({
   subsets: ['latin'],
 });
  
-export const MidSection = () => (
+const MidSection = () => (
 <div>
   <Flex position='relative' flexDirection="column" right={280} bottom={20} top={0} marginTop='15' justifyContent="center" alignItems="center" height="35vh" bgClip="text">
     <Text className={robotoCondensed.className} color="white" fontSize="2rem">About</Text>
@@ -64,3 +64,5 @@ export const MidSection = () => (
   </Flex>
 </div>
 )
+
+export default MidSection
