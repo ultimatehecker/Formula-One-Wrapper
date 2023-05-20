@@ -1,7 +1,8 @@
-import { StyleColorMode } from '../components/StyleColorMode'
-import { MainColorMode } from '../components/MainColorMode'
-import { MidSection } from '../components/MidSection'
-import { Headline } from '@/components/Headline'
+import StyleColorMode from '@/components/StyleColorMode'
+import MainColorMode from '@/components/MainColorMode'
+import MidSection from '@/components/MidSection'
+import Headline from '@/components/Headline'
+import Footer from '@/components/Footer'
 import Navbar from '@/components/NavBar'
 
 import type { NextPage } from 'next'
@@ -24,6 +25,7 @@ const Home: NextPage = () => {
       <StyleColorMode height="100vh">
         <Navbar />
         <MidSection />
+        <Footer />
       </StyleColorMode>
     </div>
   )

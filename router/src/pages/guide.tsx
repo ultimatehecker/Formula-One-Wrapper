@@ -1,4 +1,4 @@
-import { StyleColorMode } from '../components/StyleColorMode'
+import StyleColorMode from '../components/StyleColorMode'
 import Navbar from '../components/NavBar'
 
 import type { NextPage } from 'next'
