@@ -12,8 +12,7 @@
   ],
   "scripts": {
     "build": "rimraf ./lib && tsc",
-    "start": "npm run test && npm run build && node lib/api.js && npm run start:website",
-    "start:website": "cd ./router && npm run build && npm run start",
+    "start": "npm run test && npm run build && node lib/api.js",
     "test": "jest"
   },
   "repository": {
