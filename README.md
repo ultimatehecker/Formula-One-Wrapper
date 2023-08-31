@@ -1,6 +1,4 @@
-## IMPORTANT: This project is now discontinued, as it is almost impossible to work with the ErgastAPI given on how old it is. I have decided to create my own API for the FIA Racing Series (F1, F2, F3).
-
-# Formula-Simplified
+# IMPORTANT: This project is now discontinued, as it is almost impossible to work with the ErgastAPI given on how old it is. I have decided to create my own API for the FIA Racing Series (F1, F2, F3).
 
 I noticed that the Ergast Client was just difficult to use given its age. Its structure isn't the best either, so I developed something that would make it easier! Formula-Simplified is a  wrapper of the Ergast API for Node.js powered by TypeScript. 
 
